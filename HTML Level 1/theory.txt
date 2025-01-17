@@ -1,0 +1,28 @@
+HTML krne ke baad aap kisi ka bhi struture bna sakte hi. 
+
+##What is HTML?
+
+##Lec 2 HTML element.
+
+##Lec 3 Hello World
+
+##Paragraph tag me br included hota hi.
+
+##Paragraph tag.
+
+##Boiler Plate
+
+
+###Part - B 
+
+##List :- 
+
+##Anchor 
+href :- hypertext reference
+
+##Link :- absolute , and relative
+Relative Lik:- local page link
+
+##Comment
+
+image me attributes hi. HTML.
