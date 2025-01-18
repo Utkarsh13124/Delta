@@ -1,0 +1,30 @@
+Tables:- caption , tr , td ,th
+tr tag for every individual row. 
+
+border bhi rakh sakte hi.
+
+Thead , tfoor, tbody. 
+
+
+Colspan and rowspan
+
+
+
+## Forms in HTML
+from
+action attribute :- ation attribute told where to submit the form when submit button is created.
+
+input element :- a single tag, no closing tag
+    type attribute,placeholder, .
+    - text , date, time, email, number,....
+    - password, color
+
+Label attribute : - caption for an input, agar humn lable kr diya to hum name pr click kre ya input field pr , hum input field me hi jayege
+connection hum for id , ki help se krunga. 
+name attribute , backended me jake pta chlta hi , help hoti hi.
+
+IMP by using name we can connect our website with some big website.
+like here we did by connecting with youtube search
+
+##Button--> button tag , & input tag se bhi kr sakte hi.
+type = submit , reset , button(used to crate a normal button)
