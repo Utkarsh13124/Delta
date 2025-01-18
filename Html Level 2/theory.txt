@@ -1,0 +1,65 @@
+Inline :- Takes up only necessary width.
+Block Element :- takes up the full width of the block
+Start from next line
+
+Ex - block :- H1 , paragraph
+Inlin :- image , anchor 
+
+
+Div Element :- block level element. 
+Span Element :- no internal property , same as Div but it is inline. 
+
+
+hr tag
+
+subscript & superscript
+
+
+
+Semantic Markup :-
+dekhte hi meaning samjh me a jaye ki ye kya krt hi
+Section, header , footer
+good practice to use Semantic.
+Website :- meaningfu , SEO freindly, readable.
+
+non semantic :- div, span, 
+
+Semantic :- 
+Header:- 
+Main :- usually main content to display
+footer :-
+Nav :- for navigation
+
+
+practice to follow for Nav :- Header ke ander unordred list bna sakte hi. 
+
+article tag :- 
+section tag :- to group realted tag
+aside tag :- relative link / content.
+
+like on avenger pr Iron man ke liye dusri link dena. 
+
+SEMANTIC bnane wale kam hum baad me krte hi. 
+
+
+
+
+HTML Entitiy
+&nbsp;    non breaking 
+space
+&gt;
+
+
+
+
+
+
+## EMMET :- imp cheat sheets ko use kro. 
+link emmet.io 
+! , + , < , > these are 4 important one.
+
+HTML5 :- HTML new version + javascript API that are also not part of the HTML
+
+
+
+Learn by doing and Creativity is the thing that makes our groth exponential
