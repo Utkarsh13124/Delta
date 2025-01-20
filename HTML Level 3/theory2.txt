@@ -1,0 +1,26 @@
+input
+
+Checkbox type.
+    hecked attribute , bu default checked rakh dega
+    use case , choosing , terms and cod
+
+Radio Button
+name ki value same rakhni hogi.
+    Ek baar ek hi button select hoga , just like checkbox hi hota hi
+    use case - male female
+    value attribute
+
+url me name=value ke form pass hoti hi.
+
+
+Select used for creaitng dropdown. 
+    option tag ki help se hum option create krenge.
+    preselected attribute to preselct.
+
+Range 
+    min , max , step attribute , name , value attribute to pre set something.
+
+
+Text area :- for taking large feedback., comment.
+    name attribute, row , col , placeholder , resize. 
+    
