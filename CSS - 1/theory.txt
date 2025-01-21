@@ -6,3 +6,9 @@ Basic Selector
 
 
 Including CSS Continue
+    Inline style :- difficulty on large scale.
+    Internal :- difficulty as it always do for a single page. 
+    External CSS
+
+
+
