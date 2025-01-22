@@ -1,0 +1,9 @@
+text-align :- mere text left ya right  se start hona chahiye
+    left/start , right/end , centre ::--> these are according to the parent.
+    justify :- horizontal left and right boundary ek jaisy dikhayi deti hi , iske liye wo khud hi beech me needed space create kr lega.
+
+font-weight 
+    
+text - decoration :- underline , overline
+line- height :-  height btw lineletter-spacing :- 
+font size :- 

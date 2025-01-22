@@ -1,0 +1,16 @@
+// these three are mostly used
+// color property is used for background
+color : red;
+color : #ffffff;
+color : rgb(255,255,255); 
+
+
+background-color property.
+
+
+
+
+Color System :- 
+1. Named Color 
+2. RGB Color ( 255 , 0 , 0)  red color. 
+3. Hexadecimal =>color :  #000000
