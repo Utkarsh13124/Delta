@@ -3,7 +3,41 @@ text-align :- mere text left ya right  se start hona chahiye
     justify :- horizontal left and right boundary ek jaisy dikhayi deti hi , iske liye wo khud hi beech me needed space create kr lega.
 
 font-weight 
-    
+    100 - 900
+    Normal = 400
+    bold 700, 
+    bolder and lighter --> with regard to parent.
+
 text - decoration :- underline , overline
+    to set the apperance of decorative line. 
+    underline, overline , line-through
+    line ka color bhi change kr sakte hi , uska style bhi like dotted , wavy , dashed , double
+
+    IMPORTANT USECASE :- text-decoration se hum line hatane ke liye use krte hi links ki 
+
+
 line- height :-  height btw lineletter-spacing :- 
+    normal , 2.5 , 0.5 , 
+
+letter-spaceing 
+    horizontal spaceing btw letters(not words).
+    normal , px
+
+
 font size :- 
+    units :- 
+    Absolute :- 
+        px mostUsed         , cm , mm , in , pc , pt.
+        96px = 1 in , 72pt = 1 in , 12pt = 1pc
+    Relative :-  helps in responsive website. 
+        % , em , rem ( mostly used)
+        ch , vh , vw
+
+
+
+font-family :- website :- cssfontstack
+    font-style change ke liye.
+    some common :- new-roman , arial , 
+
+text-transform :-
+    uppercase , lowercase , capitalize , none, 
