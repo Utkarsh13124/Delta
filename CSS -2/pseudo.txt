@@ -1,0 +1,25 @@
+Pseudo Class 
+:- like jab hover kre to color change hi 
+link after visiting blue ho jaye , 
+yes no pr different different color show ho. 
+linke hover krne pr underline htana ho. 
+
+A keyword added to a selector that specifies a specail state of the selected elements(s)
+
+    element : pseudoclass
+
+        : hover 
+
+        : active 
+            jab use click kiya ja rha hi. 
+
+        : checked 
+            mostly used for radio button.
+        
+        : nth-of-type
+            eg :- div : nth-of-type(2n){
+                change property of every even number div
+                1n se sare ka ho jayega . 
+            }
+
+

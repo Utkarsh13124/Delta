@@ -1,1 +1,61 @@
 Html starter.
+
+Selector:- 
+    univeral selector -> *
+
+    heading tag --> h3{
+        // apply to all tag
+    }
+
+    h1 , h3{
+        // help in to remove redundancy
+    }
+
+    id selector 
+    #myId{
+        property : value;
+    }
+
+    class selector
+    .h1Class{
+        // to style lots of different or same element together
+    }
+
+    descendant selector
+        select all paragraph inside divs
+        div p{
+            property  : value;
+        }
+
+        .post a{
+            property : value;;
+            // means post class ke ander jitne bhi anchor tag hi unpe apply hoga
+        }
+
+    
+    adjacent sibling combinator
+        Eg - headings that comes immediately after any paragraph
+        p + h3{
+            property : value
+        }
+
+    Child combinator
+        eg :-  select al buttons which are direct children of spans.
+
+        span > button{
+
+        }
+
+        combinator and descendent selector me thoda difference hi , combinator direct dekhta hi , jabki descentdent ander dekhta hi , immediate and more below bhi chl jaayega.
+
+    Attribute selector
+        selects  elements based on the presence or value of a given Attribute
+
+        input[type="text"]{
+            // select the attribute where the type attribute have text value
+        }
+
+        also 
+        input[type]{
+            // select the input where type is present
+        }
