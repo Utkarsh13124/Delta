@@ -23,3 +23,5 @@ A keyword added to a selector that specifies a specail state of the selected ele
             }
 
 
+Pseudo elements
+
