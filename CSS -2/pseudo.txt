@@ -1,3 +1,5 @@
+id > class > element
+
 Pseudo Class 
 :- like jab hover kre to color change hi 
 link after visiting blue ho jaye , 
@@ -23,5 +25,20 @@ A keyword added to a selector that specifies a specail state of the selected ele
             }
 
 
-Pseudo elements
+Pseudo elements: kisi element ki specific part ke upar CSS lagana 
+    :: first-letter
+    :: first-line
+    :: selection 
+        cursor se jab select krenge, tab agar koi property add krna chahte hi
 
+If specificity of 2 clashing property is same , then we use cascading property :- 
+    means jo baad me aaya hi, uska effect rhega. 
+
+    Specificity calculation _ _ _    id , class , element
+
+
+
+
+!important
+    aisi property jisko aap kabi bhi change nhi krna chahte hi. 
+    cascading property bhi apply n
