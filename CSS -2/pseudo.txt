@@ -42,3 +42,19 @@ If specificity of 2 clashing property is same , then we use cascading property :
 !important
     aisi property jisko aap kabi bhi change nhi krna chahte hi. 
     cascading property bhi apply n
+
+
+
+INHERITANCE in CSS :- 
+    input , button .. not inherit property from parents , we have to write specifically if needed 
+    button(
+        background-color : inherit;
+    )
+    every element if not have property they try to inherit from the parent
+    width , height , border , .. are not inherited.
+
+Inspect :- 
+    arrow pr click krke hum bhut saari cheeze ko mani[ulate kr sakte hi. ]
+    styles option me saari style shhow hoti hi.  
+
+    color pallete :- coolors, canva , mycolor  
