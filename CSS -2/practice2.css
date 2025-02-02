@@ -1,0 +1,45 @@
+#mainTopic{
+    color: blue;
+    
+}
+
+#mainTopic::first-letter{
+    color: red;
+}
+
+*{
+    text-align: center;
+}
+
+h1, h3 , h5{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.para{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+div button {
+    background-color: purple;
+    color: azure;
+}
+
+button:hover{
+    background-color: yellow;
+    color : blue;
+}
+
+p:nth-of-type(2n + 1){
+    color: yellow;
+}
+
+#yes:checked + label{
+    color: darkgreen;
+}
+
+/* 
+    specificity 
+    H1 :- id 1 , class 0 , element 1
+
+*/

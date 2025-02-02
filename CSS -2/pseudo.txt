@@ -8,7 +8,7 @@ linke hover krne pr underline htana ho.
 
 A keyword added to a selector that specifies a specail state of the selected elements(s)
 
-    element : pseudoclass
+    element:pseudoclass     
 
         : hover 
 
@@ -19,7 +19,7 @@ A keyword added to a selector that specifies a specail state of the selected ele
             mostly used for radio button.
         
         : nth-of-type
-            eg :- div : nth-of-type(2n){
+            eg :- div : nth-of-type(2n){ , odd , even bhi likh sakte hi
                 change property of every even number div
                 1n se sare ka ho jayega . 
             }
