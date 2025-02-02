@@ -1,0 +1,41 @@
+Box Model in CSS  CPBM  Content padding Border Margin
+    html elemnets box ki form me stored hote hi.
+    content ki height and width property hoti hi.
+
+
+Height property of content:- 
+
+
+
+Border:-
+    setted for outer lining.
+
+    border-width 
+    border-style --> double, dashed, solid
+    border-color --> 
+
+    border : 2px solid black;
+
+    border-left-right-top-bottom;
+
+border-radius 
+    used for rounding corners;
+    for circle :-
+        make square
+        border-radius 50%;
+
+    border-top-right-radius : changes only a corner border.
+
+padding ( border ke ander hoti hi)
+    content & border ke beech ki jagah.
+    left-right-top-bottom
+
+
+    padding : 50px; // to all
+    padding : 1px 2px 3px 4px ; top , right , bottom , left anticlockwise.
+
+margin : distance between two box( border ke bahar hoti hi)
+
+    left right top btttom 
+
+    margin: 0; // to unset default margin
