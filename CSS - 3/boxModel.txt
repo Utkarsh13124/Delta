@@ -39,3 +39,5 @@ margin : distance between two box( border ke bahar hoti hi)
     left right top btttom 
 
     margin: 0; // to unset default margin
+
+    margin : auto ; // left and right se equal margin le leta hi.

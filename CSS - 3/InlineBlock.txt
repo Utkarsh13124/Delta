@@ -1,0 +1,26 @@
+Block : h1
+    occupy full 
+    start from new line
+
+Inline :  , span
+    inline element me left and right se hi    MARGIN    and 
+    PADDING all side me    hoti hi.  but top and bottom me overlap with other element.
+    take necessary width
+    not start from new line
+
+
+
+Display property    
+    display : inline; // element behaves as an inline element
+
+    display : block; 
+
+
+Inline-block : when we want ki uska styling bhi reh jaaye and wo inline bhi ban jaaye
+    element behave as inline , with property as block. 
+    element inline ki tarah single line me aa jayenge, height , width , padding , margin , ye sab block ki tarah rhega.
+
+
+Display : none;
+    to gayaab ho jaaye. 
+

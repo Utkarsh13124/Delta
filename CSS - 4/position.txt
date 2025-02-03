@@ -1,0 +1,22 @@
+top , right , left , right
+
+static :- default value, 
+    have no effect of left , right , z-index. 
+
+
+relative : releative to itself
+    space created
+
+absolute : 
+      the element is removed from the normal document flow, and no space is created for the element in the page layout.
+      it is the positioned relative to its closest positioned ancestor, if any otherwise, it is placed relative to initial containing block
+      '
+      no space created dor the positioned
+
+fixed Position
+    : positioned as per initial containing block
+    fixed ,
+    used for navbar.
+
+sticky :
+    scroll krte hue stick kr jayega

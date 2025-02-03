@@ -1,0 +1,15 @@
+%
+    width : 33.33% ; // relative to the parent
+    margin-left: 50%; // relaticce to the parent size;
+
+em : 
+    typographical/text property :- font size ,font-weight, related to parent
+    padding, margin, width,  with respect to self font-size. 
+
+    drawback :- Snowball effect effect
+        solution : rem unit.
+
+
+
+rem : - 
+    relative to font size of the root element.

@@ -1,0 +1,10 @@
+box-shadow : 2px 2px 10px green;
+    x offset , y offset , blurred radius shadow-color
+
+background-image : url("");
+
+background-size : contain / cover / auto;
+
+    contain :- crop Not , scale not , repeat
+    cover :- crop , scale not , 
+    repeat ; stretch

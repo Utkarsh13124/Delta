@@ -1,0 +1,31 @@
+Alpha Channel 
+    Sets the opacity for a color
+
+    could be given as hex code , as well as with RGB code
+
+Opacity :- 
+    sets the element opacity .
+    range for 0 to 1
+
+    opacity : 1; // for completely visible. 
+
+CSS Transition
+    helps you to define the transition between two states of an element.
+    means like when we hover on a button , it become circular, so how it become circular - fast , slow
+
+
+    Transition like jab hum hover kre to dusre state pahuch jaye
+
+    Transition : property name | duration | timing-functionn | delay
+
+    
+Transform- rotate , scale , skew, or translate
+    1. rotate 
+
+    2. scale --> scaleX, scaleY
+    transform : scale(0.5);
+
+    3. translate --> move krna x and y direction me
+
+    4. skew --> tilt krna like rectangle ko paralleogram type ka bnana hi
+    
