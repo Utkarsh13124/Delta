@@ -1,0 +1,31 @@
+outer container me set krna hota hi.
+    display : grid ;
+
+    direct children are grid item.
+
+
+gridModel
+    2d form
+    grid lines --> row line & column lines
+        1 base indexing
+
+    grid cell
+    
+    grid track :- distance between two linw
+
+
+grid template :- divide all space evenly.
+    defines the lines & track sizing
+    grid-template-rows : 100px 100px 100px
+    grid-template-rows : repeat(5, 1fr); // 1 fraction of width
+        create 5 equal rows.
+    grid-template-rows : 1fr 1fr 1fr 1fr 1fr;
+
+row-gap 
+column-gap
+
+grid-gap : row-gap column-gap;
+
+
+grid columns
+    defines an item's starting & ending position inside the column.
