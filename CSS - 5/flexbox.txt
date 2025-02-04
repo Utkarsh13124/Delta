@@ -1,0 +1,107 @@
+flexible Box Layout.
+
+    one dimensional layout method arranging in row , column. 
+
+first we have to give , parent ko 
+
+display : flex;  // default arrange in row
+
+
+
+Flex Model :- 
+    direction row
+        main Axis ==> x - axis
+        cross Axis ==> y - axis 
+    direction column
+        main Axis ==> y - axis
+        cross Axis ==> x - axis
+
+display flex dete hi saare ek line me aa ja rhe hi , and if overflow ho rha hi  then wo apni width reduce kr le rhe hi
+
+
+
+flex-direction : 
+    : row; 
+        main axis , left to right
+    : row- reverse 
+        main axis , right to left
+
+    : column
+        main axis , top to bottom
+
+    : column- reverse 
+        main axis , bottom to top
+
+justify-content :
+    tells how the browser distributes space between and around content items along the main axis
+
+    space control krta hi, direction nhi
+    content kis taraf align hoga, hum direction ki baaat nhi kr rhe hi , tilt ki bbat kr rhe hi
+    : flex-start
+        main axis ke start me
+    ; flex-end
+        main axis ke end se
+
+    : center
+
+    : space between
+        extra space beech me jayega
+    : space around 
+        extra space beech me bhi aur around half  chali jayegi
+
+    : space evenly 
+        even space. side wala nad beech wala 
+
+
+Flex-wrap :-
+    if item are taken more space.
+    sets whether flex items forced onto one line or can wrap unto multiple lines
+
+    : nowrap
+        default , try to forced into single line
+    : wrap
+
+    : wrap reverse 
+        cross axis ke along reverse direction me wrap krta hi. 
+    
+
+align-items
+    distribute our items along the cross - axis
+    flex start
+    flex end
+    center
+    : baseline
+        flex-items ke ander ka content ek line me milega, bhale hi div size differet ho.
+        priority is content ki base line na ki divs ka size
+
+
+align-content :-
+    same as justify-content , but do things with cross axis
+
+    flex-start, end , center
+    space evenly , around , between
+    baseline
+
+align-self
+    for individual item along the cross axis
+    it like align item but act for a single element and have higher priority
+    aur ye container pr nhi coontent pr lagta hi.
+
+
+flex-sizing
+    agar space bach rha hi  ti , we can grow or shrink our elements.
+
+    flex-basis : 100px;
+        matlab isme hum particular ko target krte hi, baki sab normal rhege
+
+    flex-grow : 1;
+        bache hue space me cheeze kaise grow hongi
+
+    flex-shrink : 1;
+        space less ho to cheeze kaise shrink hhongi
+        humhe particular elementss ke liye set krna hota hi, multiple ke liye bhi kr sakrte hi.
+
+
+flex-shorthand
+    flex-grow | flex-shrink | flex-basis
+    flex : 2 2 100px;
