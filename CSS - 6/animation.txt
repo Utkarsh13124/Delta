@@ -1,0 +1,56 @@
+to animate the CSS elements
+
+
+animation name
+animation-duration
+animation-timing-funtion
+animation-delay
+animation-iteration-count
+animation-direction
+
+creating template
+    @keyframes fontAnimate{
+        from {
+            font-size : 20px ;
+        }   // initial value
+        to {
+            font-size : 40px ; 
+        }   // final value & multiple properties also lik sakte hi. 
+    }
+
+using template
+    div{
+        animation-name : fontAnimate;
+        animation-duration : 2s;
+        animation-timing-funtion : ease-in;
+        animate-delay : 0.5s;
+        animate-iteration-count : 3; // infinite value also we could place
+        animate-direction : normal ; // reverse , alternate , alternate-re
+    }
+
+
+Animation shorthand
+
+    div{
+        animation : fontAnimate 3s ease-in 0.5s 3 normal;
+    }
+
+
+% in Animation
+    from 0%
+    to 100%
+    if we have multiple states within animation
+
+    @keyframes myName{
+        0% { // state A
+            font-size : 20px;
+        }
+        50% { // state B
+            font-size : 40px;
+        }
+        100% { // state C
+            font-size : 60px;
+        }
+    }
+
+

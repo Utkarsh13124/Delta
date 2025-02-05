@@ -1,0 +1,39 @@
+help create a responsive website
+
+based on device / environment we could mani[ulate various properties
+
+media features - width(of viewport)
+
+@media(width : 400px){
+    div{
+        background-color : red;
+    }
+}
+@media(min-width : 400px){
+    div{
+        background-color : red;
+    }
+}
+@media(max-width : 400px){
+    div{
+        background-color : red;
+    }
+}
+
+200 - 400 px
+@media (min-width : 200px ) and (max-width : 400px) {
+    div{
+        background-color : red;
+    }
+}
+
+
+
+
+
+
+@media (orientation : landscape){
+    div{
+        bgc : aqua;
+    }
+}

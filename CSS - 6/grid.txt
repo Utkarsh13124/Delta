@@ -29,3 +29,34 @@ grid-gap : row-gap column-gap;
 
 grid columns
     defines an item's starting & ending position inside the column.
+
+    like help in merging cells , or expanding one cell along columns.
+
+    grid-column : startcol endcol
+    grid-column : startcol / span number
+        : 1 / 4 ;
+        : 1 / span 3;
+
+    grid rows 
+        define an itens starting and ending position in row. 
+
+
+
+Common Properties
+    horizontal
+        justify-items --> for container
+        justify-self --> item
+    
+    vertical
+        align-items --> for container
+        align-self --> item
+
+    if we want horizontal and vertical both same. 
+    place-items --> for container
+    place-cell --> for item
+
+
+display : inline-grid; 
+    display grid as inline element
+    grid se humara container ek block element bn janta hi, so if we have to use the remaining side space , we could make it a inline grid.
+        similar for flex.

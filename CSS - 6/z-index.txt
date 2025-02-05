@@ -1,0 +1,7 @@
+decides the stack level 
+stack form hota hi , jab cheeze overlap ho jati hi
+
+
+larger z-index pehle visible hoga. 
+
+z-index will not work for static and default position element. 
