@@ -1,0 +1,12 @@
+JS - to add functionality
+ 
+Programming language are one step ahead of styling and markup language.
+
+
+clearing console - > ctrl + l
+uparrow --> old command comes back.
+downarrow --> 
+
+Using the Console :- 
+    Console uses REPL
+        Real , Evaluate , Print , Loop 
