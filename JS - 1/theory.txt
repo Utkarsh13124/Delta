@@ -10,3 +10,22 @@ downarrow -->
 Using the Console :- 
     Console uses REPL
         Real , Evaluate , Print , Loop 
+
+
+variable : - 
+    a variable is simply the name of a storage location
+    jaha pr value change ho sakti hi , us jagah ka naam. 
+
+Data types in JS
+    7 primitive
+        Number
+        Boolean
+        string
+        undefined
+        Null
+
+        // these 2 are less used
+        Bigint 
+        Symbol
+
+typeof() --> this operator tells the type of the variable 
