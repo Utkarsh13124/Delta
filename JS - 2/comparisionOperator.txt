@@ -1,0 +1,11 @@
+3rd Note
+
+== 
+    compare value, not type
+===
+      compare value, & type
+
+
+Comparision for Nonumber
+    A < 12 
+        so we do ASCII. 

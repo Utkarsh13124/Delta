@@ -1,0 +1,4 @@
+console.log()
+
+Linking Js 
+    <script src="app.js"></script>

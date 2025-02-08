@@ -1,0 +1,21 @@
+let a = 10;
+let b = 10;
+
+console.log(" The total price is : " , a + b , "rupees. ");
+
+// alternative
+let output = "The total price is " + ( a + b ) + " rupees ";
+
+here we used bracket nhi to wo string samajh ke add ho jaate hi , ab pehle calculate honge phir string samajh ke add honge.
+
+
+
+
+// Best way is literals
+They are used to add embedded expression in a string.
+
+let output = `The total price is ${ a + b }   ruppes. ";
+
+
+Operators in JS
+
