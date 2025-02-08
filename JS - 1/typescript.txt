@@ -1,0 +1,5 @@
+Typescript
+    static typed
+    strict version of JS(dynamic typed)
+        where we cant change data type of variable
+

@@ -18,7 +18,7 @@ variable : -
 
 Data types in JS
     7 primitive
-        Number
+        Number   19 , 9.9 , -7  
         Boolean
         string
         undefined
@@ -29,3 +29,24 @@ Data types in JS
         Symbol
 
 typeof() --> this operator tells the type of the variable 
+
+
+Operation In JS
+    %
+        used for checking odd , even
+
+    **  
+        exponential operator
+
+
+
+NaN     is a number but not valid.
+    type of Nan --> number.
+    Not a Number
+        0/0 
+        NaN - 1 , NaN + 1 , NaN + NaN
+
+
+Operator Precedence
+    bracket > exponential > * / %   > + - .
+    

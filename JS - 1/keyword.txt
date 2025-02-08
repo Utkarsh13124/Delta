@@ -1,0 +1,43 @@
+let 
+    syntax of declaring variable
+    used in maximum cases.
+
+const 
+    jo cheeze fixed hoti hi, use krna hi. 
+
+var 
+    old syntax of writing variables.
+    let is now used in place of let.
+
+unaryoperator 
+    ++ , --
+
+    preincrement :- increment then use
+    post increment :- use then increment
+
+identifierRules
+    $ , _ se bhi naam suru ho sakta hi.
+
+
+boolean 
+    true 
+    false
+    case sensitive
+
+    so True & False are wrong
+
+string
+    "write in double quotes or single quotes. 
+     
+
+null 
+    kisi bhi value ya object ke liye intionally absence of value set krna hi.
+    null ke liye humhe initialize krna padta hi , uhi undefined ke liye humhe explicitly jaake define nhi krna hota hi. 
+
+
+
+undefined 
+    variable jisko abhi humne value nhi assign ki hi
+    or aisi value ko access kr rhe hi jo out of range.
+    jo value javascript ko nhi pata hi, wha undefined print hoke ata hi.
+
