@@ -4,3 +4,16 @@ Logical Operator
     &&
     ||
     !
+
+
+truthy and falsy
+    every value in Js is truthy or falsy.
+
+    Falsy value:-
+        false, 0 , -0, On(BigInt Value), ""emotystring , null , undefined , NaN
+
+
+Switch
+    ek samay pr ek statement hirun krta hi
+
+    if-else ko likhnae ka ek tarika hi, jab hum kisi value ke basis pr comparision kr rhe hi.

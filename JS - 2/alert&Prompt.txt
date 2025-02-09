@@ -1,0 +1,16 @@
+user se input lene ke do tarike hote hi.:-
+    alert &  prompt
+
+    display an alert message on the page
+    alert("Something is wrong!");
+
+    console.log()
+    console.warn()
+    console.error()
+
+    Prompt 
+        display a dialog box that asks user for some input
+        prompt("Please enter your roll no. ");
+
+let name = prompt("Please enter your roll no. ");
+console.log(name);
