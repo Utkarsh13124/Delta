@@ -1,0 +1,29 @@
+Method 
+    actions that can be performed on ibject
+
+    ex - console.log() , alert()
+
+
+String Method
+    Format --> stringName.method();
+
+
+str.trim()
+    trims both  whitespace from both ends.
+    create a NEW STRING , OLD string not changed.
+
+
+STRINGS ARE IMMUTABLE.
+STRINGS ARE IMMUTABLE.
+STRINGS ARE IMMUTABLE.
+STRINGS ARE IMMUTABLE.
+STRINGS ARE IMMUTABLE.
+
+toUpperCase()
+toLowerCase()
+
+Argument is a some value that we pass to the method.
+
+
+str.indexOf("argument");
+    returns the first index of occurence of some value in STRING , Or gives -1 if not found.
