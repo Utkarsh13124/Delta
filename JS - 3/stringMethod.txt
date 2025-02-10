@@ -27,3 +27,10 @@ Argument is a some value that we pass to the method.
 
 str.indexOf("argument");
     returns the first index of occurence of some value in STRING , Or gives -1 if not found.
+
+
+
+method Chaning
+    use one meethod after another
+    order of execution is from left to right.
+    
