@@ -1,0 +1,14 @@
+returns a part of the original strings as a new string
+like substr()
+
+
+str.slice(starting idx , endingIdx)
+    endingIdx is not include.
+
+    str.slice(startingIdx) 
+        assume last index as length. 
+        so it take till length - 1 idx. 
+
+str.slice( - num) = str.slice( length - num ) 
+    str.slice( - 2) = str.slice( length - 2 );
+    last num number would be sliced.
