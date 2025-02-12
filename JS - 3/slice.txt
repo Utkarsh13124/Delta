@@ -12,3 +12,11 @@ str.slice(starting idx , endingIdx)
 str.slice( - num) = str.slice( length - num ) 
     str.slice( - 2) = str.slice( length - 2 );
     last num number would be sliced.
+
+str.replace()
+    searches a value in the string & returns a new string with the value replaced
+    first occurence only.
+
+str.repeat();
+    retur s a string with the umber of copies of a string.
+    
