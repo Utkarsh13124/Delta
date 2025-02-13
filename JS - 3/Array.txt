@@ -1,0 +1,3 @@
+linear collection of thing.
+
+different types of element can also be stored.
