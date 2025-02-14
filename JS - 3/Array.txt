@@ -1,3 +1,7 @@
 linear collection of thing.
 
 different types of element can also be stored.
+
+Creating AN Array 
+    .
+    let info = [' a ' , 5 , 6, "fjj"];
