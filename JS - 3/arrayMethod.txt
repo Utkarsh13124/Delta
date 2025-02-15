@@ -1,0 +1,28 @@
+add
+    push
+    unshift
+
+delete
+    pop
+    shift 
+
+
+indexOf()
+    arr.indexOf("yellow");
+    Its like find function in cpp
+
+includes()
+    similar to indexOf or find function but returns true or false.
+
+concat()--> gives new array
+    marge 2 Array
+    first.concat(second);
+
+reverse()
+    arr.reverse();
+
+
+slice()
+    copies a portion of an arrayslice(start , end);
+    both parameter are optional
+    end index is exclusive

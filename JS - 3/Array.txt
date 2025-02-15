@@ -5,3 +5,8 @@ different types of element can also be stored.
 Creating AN Array 
     .
     let info = [' a ' , 5 , 6, "fjj"];
+
+
+Array are mutable , value can be changed, new Array will not be created.
+
+
