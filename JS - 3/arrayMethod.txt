@@ -26,3 +26,19 @@ slice()
     copies a portion of an arrayslice(start , end);
     both parameter are optional
     end index is exclusive
+
+
+spice()
+    remove / replace / add element in place
+
+    splice(start , deleteCount, item0 , item1, item2, ..., itemN)
+
+
+sort()
+    days.sort();
+
+    not work well with numbers
+
+    How it works
+        convert them into a string
+        then sort.
