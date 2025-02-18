@@ -1,0 +1,18 @@
+argument are link variables ,  but we have not defined it with let, 
+    ex - name in below function.
+
+
+Definition :
+    function  printhello( name ){
+        console.log("hello" , name)   ;
+        return "hello" ;
+    }
+
+Call
+    printHello();
+
+
+
+return Keyword :- output.
+    jab humhe kayi sari value return krni hoti , tab hum array ya object bnate hi , and then use return krte hi. 
+    
