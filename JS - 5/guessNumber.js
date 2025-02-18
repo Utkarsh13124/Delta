@@ -1,0 +1,1 @@
+// simlpy a random number problem.

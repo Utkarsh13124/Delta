@@ -1,0 +1,33 @@
+Used to store keyed collection & complex entitities
+
+property => (key , value) 
+
+Objects are a collection of properties.
+
+const student = {
+    name : "Utkars",
+    age : "22",
+    marks : "84" 
+};
+
+Accessing values :- 
+
+    obj[key];
+    obj.key;
+
+    student["name"];
+    student.name;
+
+
+    one more way:- 
+        let prop = "marks";
+        student[prop]; // valid
+        student.prop;
+
+
+JS automatically converts keys into string.
+    obj[2];
+        pehle 2 ko string me convert krega, ye ek index nhi hi. 
+
+. dot operator convert nhi krta hi.
+    obj.2; // not convert into string

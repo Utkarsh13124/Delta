@@ -1,0 +1,6 @@
+
+
+Delete krna 
+    delete keyword
+    delete obj.key;
+        delete student.marks;

@@ -1,0 +1,30 @@
+storing information of multiple students
+
+
+const classInfo = {
+    aman : {
+        grade : "A",
+        city : "Chennai",
+    },
+
+    karan : {
+        grade : "A+",
+        city  : "Chennai",
+    }
+};
+
+
+//  array of object
+const classInfo = [
+    {
+        name : "aman"
+        grade : "A",
+        city : "Chennai",
+    },
+
+    {
+        name : "karan",
+        grade : "A+",
+        city  : "Chennai",
+    }
+];

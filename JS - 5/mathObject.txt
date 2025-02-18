@@ -1,0 +1,17 @@
+existing Object in JS
+collection of Mathematical function. 
+store constant values, and function
+
+
+Most used properties
+
+Math.PI = 3.14..
+Math.E => 2.71..
+
+Most used methods
+    Math.random(); 
+        gives random value between [0,1)
+    Math.abs(-12);
+    Math.pow(2,4);
+    Math.floor(8.9);    // it round of, less than or equal to.
+     Math.ceil(4.5);    // larger vinteger value pr roundof kr deta hi. 
