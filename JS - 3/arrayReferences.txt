@@ -1,5 +1,21 @@
+Notes - 5
+
 == 
 
 
 === 
     reference/address also check
+
+
+How array created in memory?
+    arr keep address.
+
+
+
+Const array = [];
+    the address of the array cannot be overwrite, but we can change the value of array.
+
+
+Nested Array , multidimensional array , 2d array
+    let nums = [ [1 ,2] , [3 ,4 ] ];
+    
