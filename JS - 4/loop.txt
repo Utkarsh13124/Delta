@@ -1,0 +1,37 @@
+to repeat over a fixed amount of code.
+
+
+1. for loop most used
+
+for(let i = 1 ; i < 10 ; i++){
+    console.log(i);
+}
+
+JO KAAM HUM FOR SE KR SAKTE HI WO SAME WORK WE CAN DO WITH WHILE LOOP.
+
+2. While loop
+
+let i = 1;
+while( i <= 5){
+    console.log(i);
+
+    i++;
+}
+
+
+
+Break keyword
+    used to Break
+
+
+3. for of loop
+    used to access the collection of item
+    on array , string
+
+    let fruits = ["mango" , "apple" , "banana"];
+
+    for(ele of fruits){
+        console.log(ele);
+    }
+
+

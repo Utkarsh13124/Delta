@@ -1,0 +1,3 @@
+let val = parseInt(str);
+
+parse string into int.

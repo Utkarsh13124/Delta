@@ -1,0 +1,5 @@
+let fruits = [ "mango" , "mango" , "mango" , "mango" , "apple"];
+
+for(let  = 0 ; i < fruit.length ; i++){
+    console.log(i, " " , fruits[i]);
+}

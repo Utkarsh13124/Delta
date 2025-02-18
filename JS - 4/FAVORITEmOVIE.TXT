@@ -1,0 +1,10 @@
+Guess Fav Movie
+
+let fav = "HK-108";
+
+let guess = prompt(" ");
+while(quess != fav && guess != "quit"){
+    guess = prompt(" ");
+}
+if(guess == fav) congrats;
+else quit;
