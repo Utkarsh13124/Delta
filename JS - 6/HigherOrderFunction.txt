@@ -1,0 +1,8 @@
+Notes-4
+
+A function that does one or both 
+    takes one or multiple function as argument
+    returns a function 
+
+
+Higher order function , function ko leke use multiple time bhi call kr sakta hi.

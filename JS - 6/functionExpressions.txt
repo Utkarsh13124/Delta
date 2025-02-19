@@ -1,0 +1,8 @@
+function to define kr rhe hi , but usko ek variable me define kr rhe hi & function ka koi naam nhi rakhte hi.
+nameless function
+iski help se hum function ko return bhi kra sakte hi.
+const sum = function(a , b){
+    return a + b;
+}
+
+sun(3,4);

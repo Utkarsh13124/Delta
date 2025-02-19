@@ -1,0 +1,27 @@
+Actions that can be performed on an object
+functions defined inside the object are called the object.
+
+const calculator = {
+    add : function(a, b){
+        return a + b;
+    },
+  // Sorthand of defining method.  
+    add2(a, b){
+        return a + b;
+    },
+    sub : function(a, b){
+        return a - b;
+    },
+    mul : function(a, b){
+        return a * b;
+    }
+};
+
+HERE functions/methods are defined in key value form.
+
+
+// ACCESS
+calculator.add(4 , 5); // 9
+
+
+Internally evrything in javascript is of object type, like array or string.

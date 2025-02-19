@@ -1,0 +1,19 @@
+Function Scope 
+    variables defined inside function cant use inside.
+    Function ke bahar hum same naam ke variable define kr sakte hi.
+
+Block Scope
+    Variables declared inside a { } block cannot be accessed from outside the block
+    apply on let & const keyword.
+    var pr humara block scope define nhi hota, matlab  agar var se define kiya hi to bahar bhi use kr sakte hi. 
+
+Hoisting :- we can use function before declaring.
+
+Lexical Scope
+    in Nested function 
+        variable defined in outer function can be used inside, 
+        OPPOSITE IS NOT TRUE.
+
+Global Scope    
+    jo bahar defined hi. 
+    global vs function scope agar fight krte hi in function, then function scope win hota hi. agar function ke bahar fight krte hi, tab global jeetata hi
