@@ -1,0 +1,1 @@
+this keyword refers to an object that is executing the current piece of code.

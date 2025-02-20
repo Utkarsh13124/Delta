@@ -1,0 +1,3 @@
+to catch error & debug.
+
+sirf try state statement nhi likhna hota hi. 
