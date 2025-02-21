@@ -1,0 +1,9 @@
+to catch error & debug.
+
+sirf try state statement nhi likhna hota hi. 
+
+Use of error catch:- if error come, then aage ka jo part hi wo run nhi krega. 
+so badi website me agar ek bhi error aayi to aage ki cheeze nhi chalegi , agar eise situation se bachna chahte hi, try&catch statements are helpful
+
+try :- try,  it throws the error. 
+catch :- if error come then this should happen. 
