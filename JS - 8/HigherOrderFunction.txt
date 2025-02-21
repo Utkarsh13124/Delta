@@ -1,0 +1,25 @@
+forEach Method
+    // pehle use hota tha , ab for-of use hota hi.
+
+
+    arr.forEach( functionDefinition );
+        run function for each value.
+
+    Ex - refer to forEach.js
+
+
+Map function 
+    create a new array by using some function definition. 
+    
+
+filterMethod 
+    create new array based on some condition.
+
+every Method --> like logical and
+    returns true if every element returns true from the callback function.
+    
+some method --> like logical or
+
+reduce method --> reduce the array into single value.
+    
+    arr.reduce( reducer function with 2 variables for (accumulator , element ));
