@@ -29,3 +29,10 @@ let arr3 = [6 , 2 , 3, 4, 5];
 let mergedArr = [...arr2 , ...arr3];
 //! order matters
 console.log(mergedArr);
+
+
+
+// ! creating copy
+let newArr = [...arr];
+let newArr2 = [...arr , ...arr2];
+
