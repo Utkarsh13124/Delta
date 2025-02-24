@@ -1,0 +1,26 @@
+represents a document with a logical tree. 
+
+Helps us to manipulate HTML with help of js
+
+
+Every html element become node in DOM. 
+
+
+Window object generates for JS.
+
+Document object generate for HTML & CSS
+
+
+Console.log(document);
+
+// this dir gives a object looking output  while log gives html looking output.
+Console.dir(document);
+
+// IMP Property inside document
+    all property
+
+
+
+WAYS TO change
+    1. Select
+    2. changes / manipulation.

@@ -1,0 +1,19 @@
+document.getElementById(mainImg);
+        if trying to acess not existing ID we get NULL in return . 
+
+
+    dir  -> gives object form.
+            print all property in key - value form , 
+    log  -> print value. 
+
+
+
+getElementByClass
+    returns the elements as an HTML Collection of Object or empty Collection
+
+
+getElementByTagName
+
+
+
+

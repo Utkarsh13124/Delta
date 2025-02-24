@@ -1,0 +1,9 @@
+used to selct the one ele,ment :- 
+    document.querySelector(".className");
+    document.querySelector("#className");
+    document.querySelector("h1");
+
+    descendent Selector
+    document.querySelector("div a");
+
+    document.querySelectorAll(".className");
