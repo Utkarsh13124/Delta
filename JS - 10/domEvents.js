@@ -2,3 +2,7 @@
 // hum uske base pr kuch kaam kra sakte hi.
 
 // 
+// 
+// Thank You
+
+let goodLuck = true;
