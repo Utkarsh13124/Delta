@@ -5,5 +5,4 @@
 // 
 // Thank You
 
-let goodLuck = true;
-let food = window.document.obj;
+
