@@ -1,0 +1,17 @@
+body{
+    background-color: white;
+    text-align: center;
+    color : brown;
+}
+
+button{
+    margin-bottom: 40px;
+}
+
+div{
+    border: 2px solid black;
+    min-height: 250px;
+    min-width: 250px;
+    font-size: 2rem;
+    padding-top: 40px;
+}
