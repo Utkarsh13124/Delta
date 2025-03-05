@@ -15,3 +15,12 @@ btn.addEventListener('click', () => {
 
     console.log(`Generated color: rgb(${r}, ${g}, ${b})`);
 });
+
+
+
+//! This in Event listener 
+// callback  ke ander this ka matlab that object
+btn.addEventListener('mouseenter' , function() ){
+    console.dir(this.innerText);
+    console.log(this);// this refers to btn here.
+}
