@@ -1,0 +1,4 @@
+mouseenter ka opposite mouseleave
+
+mouseout means jab bhi uske area se bhar jaye bahr matab uske parent ya  children ke pass jaye, 
+    bus uske visible area se bahar jana chahiye , like uska baccha bhi if visible taking some of his not visible space. 
