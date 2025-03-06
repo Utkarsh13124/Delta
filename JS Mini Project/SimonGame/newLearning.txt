@@ -1,0 +1,1 @@
+making div as btn , to apply click event.
