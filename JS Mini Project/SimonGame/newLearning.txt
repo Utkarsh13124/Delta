@@ -1,1 +1,5 @@
 making div as btn , to apply click event.
+
+
+Things to built :- 
+pressing any key will start the game
