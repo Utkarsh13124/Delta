@@ -3,3 +3,8 @@ making div as btn , to apply click event.
 
 Things to built :- 
 pressing any key will start the game
+
+Jaise hi game start ho humara button flash ho jaaye, 
+    + Level 1 show ho.
+
+Logic Working
