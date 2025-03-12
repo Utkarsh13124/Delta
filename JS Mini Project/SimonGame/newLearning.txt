@@ -7,4 +7,7 @@ pressing any key will start the game
 Jaise hi game start ho humara button flash ho jaaye, 
     + Level 1 show ho.
 
+btn press --> check 
+    correct --> level up 
+    false -> level failed
 Logic Working
