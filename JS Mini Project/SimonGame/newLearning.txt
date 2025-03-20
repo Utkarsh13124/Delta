@@ -11,3 +11,13 @@ btn press --> check
     correct --> level up 
     false -> level failed
 Logic Working
+
+
+
+Most Used --> 
+innertext = to change text.
+
+make css class to add styles
+
+rndom function.
+

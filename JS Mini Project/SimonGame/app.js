@@ -9,7 +9,7 @@ for(let btn of btns){
 }
 
 function flash(){
-    let rand = Math.floor(Math.random() * 4);
+    let rand = Math.floor(Math.random() * 3);
     seq.push(rand);
     
     display.innerText = `Level ${seq.length}`;
