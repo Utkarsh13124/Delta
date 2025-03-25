@@ -16,8 +16,23 @@ Logic Working
 
 Most Used --> 
 innertext = to change text.
+innerhtml = to change text , we can also do bold , italic here.
 
 make css class to add styles
 
 rndom function.
 
+
+naming culture , keeping same name as tag , class , or as element .
+
+and also koi bhi function ki working krne se pehle , checking ki wo even listeneres ke saath work kr rha hi to , console logg tbhisName function is called.
+
+
+fetching out some specific detail like color, we use helpp of making a new id for each div.
+    userColor = btn.getAttribute("id");
+
+any change for a small time
+    apply change  , use settime out
+
+
+homework -> highest score for a user in one turn. 
