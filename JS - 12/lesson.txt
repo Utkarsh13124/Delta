@@ -1,0 +1,1 @@
+reject hone ke baad bhi code chalega, untill and unless we use throw or return  .
