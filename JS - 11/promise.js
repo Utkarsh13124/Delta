@@ -1,3 +1,8 @@
+
+
+
+// ---------------------------------------
+// part 2
 /*
     Promise ek object hoti hi.
         jo  success ya failure return krega , jise  hum resolve ya reject bolte hi.
@@ -54,20 +59,25 @@ function savetoDB(data){
 // });
 //! A more compact way to write above.
     savetoDB("Apna Colledge")
-    .then( ()=>{
-        console.log("Data1 saved.");
+    .then( (result)=>{
+        console.log("Data1 saved." , result);
         return savetoDB("helloworld"); // savetoDB function is returning a promise 
     })
-    .then(()=>{
-        console.log("Data1 saved.");
+    .then((result)=>{
+        console.log("Data1 saved." , result);
         return savetoDB("Shraddha");
     })
-    .then(()=>{
-        console.log("Data3 saved");
+    .then((result)=>{
+        console.log("Data3 saved" , result);
     })
-    .catch(()=>{
-        console.log("promise was rejected");
+    .catch((error)=>{
+        console.log("promise was rejected" , error);
     });
+
+    /*
+        then me hum ek parameeter le sakte hi, jo success and failure humne promise create hue bnaye the , use store krenge.
+        ! Use case :- api k success pe humhe kuch kaam krwana hi, dusri api bhejni hi, dusri ke success pe third bhejini , promise chaning ka use krte hi.
+    */
 
 //----///------///------------------------//
 //! Part 1 , Part 2 above
