@@ -1,0 +1,109 @@
+a text based input and output environment. 
+
+Adv of terminal :- 
+1. nodejs , git , programming
+2. speed
+3. access to hidden folders , others
+
+
+
+
+Terminal , Command line , console , shell , bash
+    shell :- program/software running on terminal.
+
+
+~ ==> home directory.
+    destop , download , etc all in home directory.
+
+upward and downward arrow :- for previous and forward command.
+
+
+Basic Command :- 
+    1. ls = list files 
+        show my files
+
+    2. pwd = print working directory
+        (where am i?)
+
+
+    3. clear 
+        clear screen.
+
+Navigation 
+    going inside or outside the directory
+
+    1. cd = change directory
+
+    2. cd ..(cd space ..)
+        going one step back.
+        cd ../..  going two step back.
+
+
+Path
+     relative path --> depend on where we are currently.
+        start with some name.
+        depend on where we are.
+     absolute path --> is fixed for any directory.
+        absolute path always start with /(_slash)
+        cd /users/utkarsh/desktop/krishna/photos
+
+        always work
+
+
+
+/  => directory 
+    jitni bhi cheeze hi system ke ander , everything isi ke ander , chahe hum multiple account hi kyu na bna le.
+    cd / is root directory
+
+~ => home directory 
+    sari ki saari is system ya user ki file hi
+
+    cd /user/utkarsh this is home directory
+
+
+Making directory
+    mkdir = make directory
+        create folders only 
+        not files.
+
+
+Flags 
+    Flags are characters that we pass with commands to modify their behaviour.
+        to get extra informatio.
+        ls -a , ls -l , ls -la , ls -c
+        ls -a
+            to see files begin with . 
+            . files are generally hidden.
+
+    manual command  
+        man ls 
+        man cd
+        man anyCmd
+            gives information about the command.
+
+         q command ==> manual se bahar nikalne ke liye q press krte hi.
+
+        comma 
+
+
+
+
+touch command   
+    to create file
+        ex :- touch index.html ==> create file
+
+
+Deleting files & folders
+    sensitive, if deleted , cant get back. even from recycle bin. 
+    we should check twice before using deleting command.
+
+    rm ==> remove files
+
+    rmdir ==> remove empty folders
+
+    rm -rf ==> remove any folder.
+        r flag => recursive deleted, 
+        f ==> forced delete
+
+
+
