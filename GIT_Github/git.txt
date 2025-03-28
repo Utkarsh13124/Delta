@@ -1,0 +1,46 @@
+Git 
+    free & open source Version Control system
+        Version Control System :- tools that help to tracks changes in code. 
+
+     track history
+     help to collaborate.
+
+
+Github
+    website
+    where we host repositories online. 
+
+    uploads our projects. 
+
+
+Create a Repo at Github
+    readme.md => markdown extension.
+
+    on seeing commit we see two types of change :- 
+        green color with + sign changes added
+        red color with - sign changes removed.
+
+
+Using Git
+    1. step is 
+    configuring git
+        git config --global user.name"My Name"
+        git config --global user.mail"---"
+
+
+
+Clone Command :-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
