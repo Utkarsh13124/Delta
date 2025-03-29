@@ -30,6 +30,7 @@ Remember Backened_2 naam se folder bnao , nhi to init krne me dikkat hoti  , phi
         let say we create a MyProject and we want to use node for our Project, then we have to create package.json
             npm init     => initialization
             fill other detail
+            npm init -y   :- to let system fill default details.
 
             ab agar hum aage chalke koi aur package install krna chahte hi to install krne pr dependencies aa jayegi , sab pehle jaisa , but pehle jaise package.json nhi hota tha to wo create hota tha but ab hi to wo modify ho jayeha
 
