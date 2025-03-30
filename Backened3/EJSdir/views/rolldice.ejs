@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Dice</title>
+</head>
+<body>
+    <h2>Rolling a dice : <%= diceVal  %></h2>
+    Above DiceVal is a variable, received from index.js
+    <% if(diceVal == 6){ %>
+        <h2>Nice! roll dice again</h2>
+        <p>Thses statement only execute if above conditions sets true, as these html lines are written between two if block ejs tag.</p>
+    <% }%>
+</body>
+</html>

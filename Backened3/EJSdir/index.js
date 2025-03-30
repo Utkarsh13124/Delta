@@ -35,6 +35,21 @@ app.listen( port , ()=>{
         aisa krne se ejs file run hone me koi dikkat nhi aayegi.
 
     ! interpolation syntax in EJS
+        refers to embedding js expressions into marked up text
+        we make our html dynamic.
+        documentations at ejs.co
+            for output
+                <%= 1 + 2   %> 
+                    this will be output 3
+
+
+        sending data of database for rendering
+        !passing data to EJS
+            we make object and pass it as second argument , in res.render().
+            and in EJS file we can use it by its key.
+
+
+
     
 */
 
@@ -48,4 +63,45 @@ app.get("/" , (req , res)=>{
     res.render("home.ejs");
 })
 
+
+app.get("/rolldice" , (req, res) =>{
+    let diceVal = Math.floor(Math.random() * 6) + 1; // assuming this data has come from DB
+    // all line works below, we can keep key and value as same name , then we not need to write both thing.
+        // res.render("rolldice.ejs" , { num : diceVal}); 
+        // res.render("rolldice.ejs" , { diceVal : diceVal});
+        res.render("rolldice.ejs" , { diceVal });
+})
+
+// //! Instagram EJS :- a small activity
+// app.get("/ig/:username" , (req , res) => {
+//     let {username} = req.params;
+//     res.render("instagram.ejs" , { username });
+// })
+
+//! Consitional Statement in EJS
+/*
+    <% %> for conditionals
+        look for exaple in rolldice
+*/
+
+//! loops in EJS :- print name of followers for a user
+//! Instagram EJS :- a small activity
+// app.get("/ig/:username" , (req , res) => {
+//     let {username} = req.params;
+//     const followers = ["adam" , "bob" , "charlie" , "donald" , "eve" , "steve"]; // assume data receieved from DB
+//     res.render("instagram.ejs" , { username , followers});
+// })
+
+
+//! using database for instagram page
+// firstly we need to require it.
+app.get("/ig/:username" , (req , res) => {
+    let {username} = req.params;
+    const instaData = require("./data.json");
+    // console.log(instaData);
+    let data =  instaData[username] 
+    console.log(data);
+    // const followers = ["adam" , "bob" , "charlie" , "donald" , "eve" , "steve"]; // assume data receieved from DB
+    res.render("instagram.ejs" , { data }); // sending data of username from received data from database.
+})
 
