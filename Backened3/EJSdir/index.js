@@ -99,9 +99,10 @@ app.get("/ig/:username" , (req , res) => {
     let {username} = req.params;
     const instaData = require("./data.json");
     // console.log(instaData);
-    let data =  instaData[username] 
-    console.log(data);
+    let data =  instaData[username] ;
+    // console.log(data);
     // const followers = ["adam" , "bob" , "charlie" , "donald" , "eve" , "steve"]; // assume data receieved from DB
-    res.render("instagram.ejs" , { data }); // sending data of username from received data from database.
+    if(data) res.render("instagram.ejs" , { data }); // sending data of username from received data from database.
+    else res.render("noAccount.ejs" , {username});
 })
 
