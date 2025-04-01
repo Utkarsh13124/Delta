@@ -1,6 +1,6 @@
 /*
     Asynchronous Javascript and XML
-     - No reloading. like we like on a post , api request goes , and servide me some changes happen.
+     - No reloading. like we like on a post , api request goes , and server me some changes happen.
      - Name me XML , but generally JSON form me Data aata hi , kyuki XML purana hi aur AJAJ sunne me utna shi lagata hi.
 
 
