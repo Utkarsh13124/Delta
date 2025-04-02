@@ -13,4 +13,5 @@
     isko even delegation khete hi.
     
     isse bachne ke liye event bubbling ka use krenge, hum uske parent ke upar listnere lagayenge, 
-    event.target.nodeName se hum use select kr lenge. */
+    event.target.nodeName se hum use select kr lenge.
+ */
