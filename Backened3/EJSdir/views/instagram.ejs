@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
-    <style>
-        img{
-            height: 100px;
-            width: 100px;
-        }
-
-    </style>
-</head>
+<%- include("includes/head.ejs")  %>
 <body>
     <h1>This page belongs to @<%= data.name  %> </h1>
     <button>Follow</button>
@@ -23,5 +10,8 @@
         <img src="<%=post.image%>" alt="Pic of <%= post  %>">
         <p>Likes : <%= post.likes %> &nbsp; &nbsp; Comments : <%= post.comments %> </p>
     <% } %>
+    <!-- using ejs unescapped code (means it returns html , while escaped means it returns string) -->
+    <%- include("includes/footer.ejs")  %>
+    <script src="/app.js"></script>
 </body>
 </html>

@@ -56,6 +56,12 @@ app.listen( port , ()=>{
 app.set("view engine" , "ejs");
 app.set("views", path.join(__dirname , "/views") ); // a good practice , if we are running our index.js from outer directory
 
+// app.use( express.static("public") );
+    // setting public  as static, so we can also excess it from outside.
+    app.use( express.static( path.join(__dirname , "/public/js")));
+    app.use( express.static( path.join(__dirname , "/public/css")));
+
+
 // app.get("/" , (req , res)=>{
 //     console.log('this is home');
 // })
@@ -106,3 +112,32 @@ app.get("/ig/:username" , (req , res) => {
     else res.render("noAccount.ejs" , {username});
 })
 
+/*
+    ! Serving Static files
+    CSS ya JS ko bhi include krna.
+
+    app.use( express.static("public"));
+        ye line humhe index.js ke ander likhna hi 
+        express.static() humara ek middleware hi.
+        public --> humaara folder ka naam hi jiske ander static files hi.
+        
+        as hum template ke liye cs , js taiyar krke rakh de rhe hi, hum nhi chahte ki ye sab code bhi server se aaye , like instagram me hum data server se managa rhe hi , baaki css and js hum already prepare krke rakhe hi.
+            app.use( express.static("public") );
+            setting public  as static, so we can also excess it from outside.
+            app.use( express.static( path.join(__dirname , "/public/js")));
+            app.use( express.static( path.join(__dirname , "/public/css")));
+
+        */
+
+/*
+    includes 
+        creating subtemplatess.
+
+        like instagram.ejs jo html ki file thi , usme head tag sabke ander same hi , to hum usko ek alag sub templates me daal sakte hi , using includes
+        we create a folder inside views with inlcludes name
+
+            <%- include("includes/head.ejs")  %>
+                write above line in instagram ejs which you want to replace by sub template.
+                /includes/head.ejs ye nhi likhna hi, / nhi lagana hi
+
+        */  
