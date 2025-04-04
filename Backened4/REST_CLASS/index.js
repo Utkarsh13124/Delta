@@ -14,6 +14,8 @@ const path = require("path");
 
 // helping express to understand parse the onject data in requeest body
     app.use(express.urlencoded({ extended : true }));
+    app.use(express.json());
+
 // for using EJS template
     app.set("view engine" , "ejs");
     app.set("views" , path.join(__dirname, "views"));
@@ -41,7 +43,7 @@ let posts = [
 ]
 
 app.listen(port , ()=>{
-    console.log("Listening to port : 8000");
+    console.log("Listening to port : 8080");
 });
 
 //! index js
@@ -73,9 +75,27 @@ app.get("/posts" , (req, res)=>{
 // Show route :- showing with specific Id.
     app.get("/posts/:id" , (req , res) => {
         let {id} = req.params; // id would always be unique , even the username could be same , but id for a post would be different , as a same user is posting again and again
-        
+        console.log("post : " , id);
             //The find method is used to search through the posts array. It returns the first element that satisfies the provided testing function.
         let post = posts.find( (p) => id === p.id );
-        
-        res.render("show.ejs" , { post });
+        console.log("Show : ",  post);
+        if(post) res.render("show.ejs" , { post });
     });
+
+app.patch("/posts/:id" , (req , res) => {
+    let { id } = req.params;
+    let newContent = req.body.content; //! fetching direct value, without destructuring
+        // newContent me modified value  hi jise humhe modify  krna hi
+    // console.log(id , newContent);
+
+    //! we have id , by using that we are finding post
+    let post = posts.find( (p) => id === p.id );
+    //! If post exists, update it
+    if (post) {
+        post.content = newContent;
+        console.log(post);
+        res.send("Post updated successfully.");
+    } else {
+        res.status(404).send("Post not found.");
+    }
+});
