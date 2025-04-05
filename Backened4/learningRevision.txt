@@ -1,0 +1,23 @@
+send used to send some response, 
+    while render helps to render some ejs page.
+
+form ke ander agar humne posts method define kr rakha hi, to wo ssubmit krne pr ek post request dega , to action link.
+
+
+fetching value , 
+let {id} = req.params;
+        console.log(id); // a1
+
+    let id2 = req.params; // fetching object.
+        console.log(id2); // {id2 : 'a2 }
+
+
+
+Although UUID gives a unique id 
+    which have  very less chance for repetetion , 340 undecillion
+
+    but if we want to be highly certain about id , we could use timestamp + system Information
+    
+Patch request   
+    jaise hi hum server me modification krte hi, 
+    waise hi post ki id change ho jati hi.

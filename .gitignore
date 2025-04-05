@@ -1,7 +1,9 @@
 Docs/
-homework.txt
 Progress Track/
+node_modules/
+
+homework.txt
 tips&Ethics.txt
 DevMindset.txt
 Challenge.txt
-node_modules/
+Contexts.txt
