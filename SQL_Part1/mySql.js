@@ -53,7 +53,7 @@
         1. CREATE 
             - define the schema of TABLE
 
-            CREATE TABLE tabble_name( // columns are schema
+            CREATE TABLE table_name( // columns are schema
                 column_name1 dataType constraint(optional),
                 column_name2 dataType constraint(optional),
                 column_name3 dataType constraint(optional)
@@ -158,3 +158,172 @@
     2. to show all
         SELECTS * FROM table_name;
 */
+
+// ------------------------------------------------------------------------------------------
+//* SQL 2
+
+//! WHERE CLAUSE
+    /*
+        To define some conditions
+
+            SELECT name , followers
+            FROM user
+            WHERE followers >= 200;
+
+
+    ! OPERATORS in WHERE
+        ARITHMETIC +-
+        COMPARISION != 
+        LOGICAL AND,OR
+        BITWISE MANIPULATION | &
+    */
+
+   //! LOGICAL operator FREQUENTLY used
+   /*
+    AND checks both condition are correct. 
+        WHERE age < 18 && followers > 200
+    OR check one condition for true
+
+    BETWEEN ( selects for a given range )
+        ? users with 16-17
+        WHERE age BETWEEN 16 AND 17
+
+    IN (matches any value in the list)
+        we have list , and we match
+        like we want a list which have _ _ emails.
+
+        WHERE email in ("xyz@email" , "uvw@email");
+
+    NOT ( to negate the condtion)
+   */
+
+
+//! LIMIT clause
+    // sets an upper limit on mumber of tuples (rows) return by the DB
+ //   LIMIT 5;
+
+
+ //! ORDER BY CLAUSE
+    /*
+        * TO sort in ascending (ASC) or descending order(DESC)
+
+    SELECT col1 , col2 , FROM table_name
+    ORDER BY col_names ASC;
+
+    by default sorting happen in ascending order. 
+    */
+
+//! Aggregate functions
+    /*
+        performs a calculation on a set of values , and return a single value
+        COUNT() , MAX() , MIN() , SUM() , AVG()
+        (_col_name_)
+    */
+
+//! GROUP BY CLAUSE
+    /*
+        GROUPS rows that have the same values into summary rows.
+        it collects data from multiple records and groups the result by one or more column
+
+        * Generally we use group bby with some aggregation function
+    
+            suppose we want to found the count of user based on their group. 
+
+            ? group by ka use krke hum group bnate hi , and then us group me kuch kaam krane ke liye aggregate function ka use krte hi
+            ? aggregate function ke bahar hum usi column ka naam rakh sakte hi, jo aggregate function me hi
+            SELECT name , age , MAX(followers)
+            FROM user
+            GROUP BY age; 
+                -> will give error , hum sirf unhi column ko selects kr sakte hi jinhe humne group by kiya hi
+    */
+
+//! Having Clause
+/*
+    similar to WHERE( apply some condition on rows)
+   But it is used when we want to apply any CONDITION AFTER GROUPING
+
+   WHERE is for TABLE 
+   HAVING is for GROUP
+   Grouping is necessary for HAVING
+    SELECT age , MAX(followers)
+    FROM user
+    GROUP BY age
+    HAVING max(followers) > 200; 
+
+*/
+
+//! GENERAL ORDER
+/*
+    SELECT column(s)
+    FROM table_name
+    JOIN ___ on __
+    WHERE condition
+    GROUP BY column(s)
+    HAVING condition
+    ORDER BY coulmn(s) ASC
+    LIMIT cnt;
+*/
+
+
+//! UPDATE ROW - TABLE QUERY
+    /*
+        Update ( to update existing rows)
+
+            UPDATE table_name
+            SET col1 = val1 , col2 = val2
+            WHERE condition;
+
+        When we do update first time , we get Safe_update error
+            SET SQL_SAFE_UPDATES = 0; // run this command
+    */
+
+//! DELETE ROW - Table Query
+/*
+    DELETE FROM table_name
+    WHERE condition;
+
+    ! if we not write the where condition it will delete all row.
+*/
+
+
+//! ALTER - Table Query
+/*
+    To change column data , name , dataType, constraint , add , delete
+
+    ADD Column  -> new column
+        ALTER TABLE table_name
+        ADD COLUMN new_column_name datatype constraint;
+
+
+    DROP Column -> to delete a column
+        ALTER TABLE table_name
+        DROP COLUMN column_name;
+
+
+    RENAME Table
+        ALTER TABLE table_name
+        RENAME TO new_table_name;
+    
+    CHANGE Column -> change name or datatype or constraints
+        ALTER TABLE table_name
+        CHANGE COLUMN old_name new_name new_datatype new_constraint;
+            ! agar humhe kuch bhi change krna hi to saari detail dobara dalni padegi
+                for ex , agar naam change kr rhe hi , tab bhi humhe old datatype and constraint likhne honge.  
+
+
+    Modify Column( modify datatype / constrain )
+        ALTER TABLE table_name
+        MODIFY col_name newDataType new_constraint;
+
+
+    Truncate (to delete table's data)
+        delete data not table
+
+        TRUNCATE TABLE user;
+
+
+
+
+
+        
+*/  
