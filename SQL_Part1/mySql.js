@@ -109,9 +109,52 @@
                         prevent action that would destroy links between tables
                         a column which is PRIMARY KEY in some other table.
 
+                        CREATE TABLE temp (
+                            cust_id int,
+                            FOREIGN KEY (cust_id) references customer(id)
+                        );
+                    
+
+! to see a ER diagram CTRL + R
 
 
 
 
+*/
 
+
+//! WHAT are keys?
+/*
+    Primary Key :- unique to a table , and not null. 
+        it is a column (or set of columns) in a table that uniquely identifies each row. 
+
+
+    Foreign Key :- 
+        could be multiple foreign key, not unique --> multiple column 
+        FKs can have duplicate & Null values
+        
+*/
+
+
+//! Table queries
+/*
+    * Order is very important
+        insert into table_name
+        (colname1, colname2)
+        VALUES
+        (COL1_v1, COL2_V1),
+        (COL1_v2, COL2_V2);
+*/
+
+//! SELECT command
+/*
+    Selects & Show data from the DB
+
+    1. SELECT col1, col2 FROM table_name;
+        !1.1 DISTINCT
+            SELECT DISTINCT age FROM user;
+                like users ke pass common ages hi , and we want a unique agees to come.
+
+    2. to show all
+        SELECTS * FROM table_name;
 */
