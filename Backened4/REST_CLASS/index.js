@@ -8,6 +8,9 @@ const { v4 : uuidv4 } = require('uuid');
     // v4 ffunction ko hum use kr rhe hi , uuidv4 name se , v4 means version4
 // ! for creating id => uuidv4() it will give a id.
 
+//! to send patch , delete request by ejs form
+ const methodOverride = require("method-override");
+    app.use(methodOverride('_method'));
 
 // for linking folders
 const path = require("path");
@@ -94,9 +97,26 @@ app.patch("/posts/:id" , (req , res) => {
     if (post) {
         post.content = newContent;
         console.log(post);
-        res.send("Post updated successfully.");
+        // res.send("Post updated successfully.");
+        res.redirect("/posts");
     } else {
         res.status(404).send("Post not found.");
     }
 });
 
+//! edit route
+    app.get("/posts/:id/edit" , (req , res) => {
+        let { id } = req.params;
+        let post = posts.find( (p) => id === p.id);
+        res.render("edit.ejs"  , { post })
+    })
+
+//! delete route
+    app.delete("/posts/:id", (req,res) => {
+        let { id } = req.params;
+        // deleting using filter method.
+        posts = posts.filter( (p) => id !== p.id);
+        // res.send("Delete Success.");
+        res.redirect("/posts");
+
+    })

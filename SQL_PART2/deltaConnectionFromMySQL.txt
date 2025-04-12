@@ -1,0 +1,65 @@
+CREATE DATABASE college; -- To Create a DB
+DROP DATABASE IF EXISTS college; -- To delete a DB
+
+-- USE college;
+-- CREATE TABLE student(
+-- 	rolno INT,
+--     name VARCHAR(30),
+--     age INT
+-- );
+
+-- INSERT INTO student
+-- VALUES
+-- (101 , "adam", 12),
+-- (102, "bob" , 14);
+
+-- SELECT * FROM student;
+
+
+CREATE DATABASE instagram;
+DROP DATABASE IF EXISTS instagram;
+USE  instagram;
+
+CREATE TABLE user(
+	id INT,
+    age INT,
+    name VARCHAR(20) NOT NULL,
+    email VARCHAR(30) UNIQUE,
+    followers INT,
+    following INT,
+    CONSTRAINT CHECK(age >= 13),
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE post(
+	id INT PRIMARY KEY,
+    content VARCHAR(100),
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES user(id) -- we are telling that userId is foreign key , and it is id in some other table , hence we cconnected two table. 
+    
+);
+
+INSERT INTO user
+    (id, age, name , email , followers , following)
+    VALUES
+    (1 , 14, "adam" , "adam@yahoo.in" , 123 , 145),
+    (2 , 15, "bob", "bob123@gmail.com" , 200 , 200),
+    (3 , 16 , "casley" , "casley@email.com" , 300 , 322),
+    (4 , 17, "david", "david99@gmail.com", 180, 190),
+	(5 , 18, "eva", "eva_w@example.com", 220, 210),
+	(6 , 19, "frank", "frankie@abc.org", 250, 255),
+	(7 , 20, "grace", "grace.mail@xyz.net", 270, 280),
+	(8 , 21, "harry", "harry001@outlook.com", 310, 315),
+	(9 , 22, "irene", "irene@example.com", 330, 340),
+	(10, 23, "john", "john_doe@gmail.com", 290, 300);
+    
+    
+SELECT name , age
+FROM user
+WHERE age <= 16;
+
+UPDATE user
+SET followers = 400
+WHERE age = 16;
+
+SET SQL_SAFE_UPDATES = 0;

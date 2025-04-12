@@ -103,3 +103,40 @@ DELETE      /posts/:id  to delete specific post     DESTROY ROUTE //! by convent
             sending patch request with hopscotch, humhe request body ko edit krke usme jo , cheeze change krni hi use , key value ki form me bhejenge.
             
     */
+
+//! Edit route 
+/*
+    CREATE form for UPDATE
+        serve the edit form         GET         /posts/:id/edit
+
+        humhe patch request bhejni for update , jo humne upar bnayi hi, but html forms only sent get , and post request
+        ! we use package method-override
+            matlab , get ya post ko katkar use patch , put , ya delete bna dega.
+
+        *Usage documentation me hi:- 
+            here most used one is discussed :- query method
+            <form method="post" action="/resource?_method=DELETE">
+                button type="submit" > Delete Resource</button>
+            </form>
+          
+          hum normal get ya post request hi bhejte hi, but ander ek query bhej denge _method="DELETE"
+            one important thing , in ejs form , use key "name" to set the thing which is changing , as "name" goes in request body ,
+          ?How happened :- create an route , create ejs page
+            send patch request to patch route update route that is created.  
+*/
+
+
+//! Delete path
+/*
+    Destroy route
+    implement: posts/:id        Delete      to delete a specific page.
+
+    How to do :- 
+        first give delete /link , create a route for it , create a rendering page for it, sends request, do logic work if needed.
+            link se hum form wala tarika use krenge request bhejne ke liye
+            to hum button ko form ka btn bna denge , aur form me post action , aur DELETE request send krenge by using overrideen
+        button wala tarika bhi hi , usme addd event listener laga kr humhe request bhejna padega
+
+            btn send delete request on route , where we do logic
+                logic is filter all except that. 
+*/
