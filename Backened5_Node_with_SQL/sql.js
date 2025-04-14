@@ -48,12 +48,18 @@
 
 
 //! Now we will practice for routing like we do earlier , but know this time , we fetch data from SQL
-    /*
+    /* we have users data. 
         get     / -> show no of user in DB
         get / user  -> show users( email , id , username ) ejs
         patch /user/:id     -> username edit
 
-        POST / user -> new user
+        POST / user -> add new user
         DELETE /user/:id -> user delete , before deleting password should be ask.
     
     */
+
+//! Home Route
+/*
+    set up express. & UUID 
+
+*/
