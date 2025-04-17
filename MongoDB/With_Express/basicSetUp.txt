@@ -1,0 +1,26 @@
+npm init -y
+npm i express , ejs , mongoose
+create index.js
+
+const express = require("express");
+const app = express();
+
+app.listen(8080 , () => {
+    console.success established
+})
+
+app.get("/" ,(req, res) =>  {
+    main route created. 
+})
+
+const mongoose = require("mongoose");
+
+main.then(connection successful).catch( err => console err);
+
+async function main(){
+    await mongoose.connect('mongodb://127.0.0.1:27017/whatsapp');
+}
+
+const path = require("path");
+app.use("views" , path.join(__dirname , "views"));
+app.set("view engine" , "ejs");

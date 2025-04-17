@@ -101,36 +101,109 @@ User.insertMany([
 
 //! find 
     /*
-         Model.find() 
-            
+         Model.find( {_condition_} ) // returns a query object(thennable)
+           Mongoose queries are not promise , but they have a .then()
+ ?           returns a query object, but not a promise
+                * but fir bhi hum usme .then() method laga sakte hi. 
+
+        User.find({})
+        User.find({ age : {$gt : 47} })
+    ! findOne
+        returns exactly one. 
+        User.findOne( { _id : "123" })
+
+        ? as id is very much  used to perform vrious operation 
+        so in Mongoose , there is especail method about it. 
 
     */
 
+    // User.find({})
+     
+    User.find({ age : {$gt : 47} })
+        .then( (res) => {
+            console.log(res); // res is array of object on console we see, 
+                // so res[0] is a object , res[0].name 
+        })
+        .catch( (err) => {
+            console.log(err);
+        })
+
+    
+User.findById("67fded205f308debfee5122a")
+.then( (res) => {
+    console.log(res); 
+})
+.catch( (err) => {
+    console.log(err);
+})
+
+//! Update 
+/*
+Returns a Query object.
+    updateOne
+        User.updateOne({name : "Bruce"} , {age : 59})
+         updating age with 59 , where name is Bruce, yaha  humhe set operator ko use krna ka jaroorat nhi hi. 
+
+    updateMany
+
+     also they return meta data like this, if we need to find the updated value together. then we have othermethods
+     {
+        acknowledged: true,
+        modifiedCount: 0,
+        upsertedId: null,
+        upsertedCount: 0,
+        matchedCount: 0
+    }
+*/
+
+User.updateOne({name : "Bruce"} , {age : 59})
+.then( (res) => console.log(res))
+.catch( (err) => console.log(err) );
+
+
+//! find and update
+/*  
+    findOneAndUpdate
+        this actually print the  data but old value
+        for printing new value , we need to send option together
+         new option need to send which is defaultly false , set to true and send
+
+    findByIdAndUpdate
+*/
+//? if new is true , then it returns themodified value.
+User.findOneAndUpdate({name : "Bruce"} , {age : 80} , {new : true})
+.then( (res) => console.log(res))
+.catch( (err) => console.log(err) );
+
+
+//! deleteOne and deletemany
+/*
+    returns a queryObject
+     filter is passed based on which the value is deleted.
+*/
+
+User.deleteOne( {name : "Bruce"})
+.then( (res) => console.log(res))
+.catch( (res) => console.log(res));
+
+User.deleteMany( {age : 48})
+.then( (res) => console.log(res))
+.catch( (res) => console.log(res));
+
+
+//! findByIdAndDelete , findOneAndDelete
+ //? it also print the deleted value
+User.findByIdAndDelete("68008c099a4b13dc1750e3e0")
+.then( (res) => console.log(res))
+.catch( (res) => console.log(res));
+
+
+//! Schema Validations ==> rules for Schema validation
+/*
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 
