@@ -33,11 +33,11 @@
                 </form>
             </div>
             <p>Received by : <i><%= chat.to %></i></p>
-            <br><br>
+            <br>
         </div>
         <p>Chat Created_at : <%= chat.created_at.toString().split(" ")[4]%> </p><!--split function with separator giving array separated by separator-->
         <p>Chat Created Date : <%= chat.created_at.toString().split(" ").slice(0 , 4).join("-")%> </p><!--split function with separator giving array separated by separator-->
-        
+        <br><br> <br> 
         <hr>
     <%}%>
 

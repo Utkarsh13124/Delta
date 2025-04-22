@@ -1,4 +1,4 @@
-body{
+/* body{
     margin-left : 20;
 }
 .chat{
@@ -13,4 +13,135 @@ body{
     color: white;
     padding: 2px 15px;
     border-radius: 16px;
+}  */
+
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+/* Heading */
+h3 {
+    text-align: center;
+    color: #075e54;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* New Chat Button */
+form[action="/chats/new"] button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+form[action="/chats/new"] button:hover {
+    background-color: #1ebe5d;
+}
+
+/* Chat Container */
+.chat {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.chat:hover {
+    transform: scale(1.01);
+}
+
+/* Message Section */
+.msg p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0 10px;
+}
+
+/* Meta Information */
+.chat p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Buttons */
+form[action*="/edit"] button,
+form[action*="DELETE"] button {
+    background-color: #075e54;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+form[action*="/edit"] button:hover {
+    background-color: #0a7869;
+}
+
+form[action*="DELETE"] button {
+    background-color: #ff4d4d;
+}
+
+form[action*="DELETE"] button:hover {
+    background-color: #e60000;
+}
+
+/* Chat Time Info */
+.chat + p {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .chat {
+        padding: 12px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    form[action="/chats/new"] button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .msg p {
+        font-size: 15px;
+    }
+
+    form[action*="/edit"] button,
+    form[action*="DELETE"] button {
+        width: 48%;
+        margin: 5px 1%;
+        font-size: 13px;
+    }
 }

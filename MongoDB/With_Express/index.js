@@ -177,4 +177,4 @@ app.get("/chats" , async (req , res) => {
         let deletedChat = await Chat.findByIdAndDelete(id);
         console.log(deletedChat);
         res.redirect("/chats");
-    })
+    }) 

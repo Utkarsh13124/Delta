@@ -37,7 +37,7 @@ let allChats = [
         created_at: new Date(),
     },
 ];
-
+ 
 Chat.insertMany(allChats)
 .then(res => console.log("Chats inserted:", res))
 .catch(err => console.log(err));
