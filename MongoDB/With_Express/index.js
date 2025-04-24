@@ -82,11 +82,11 @@ app.get("/" , (req , res) => {
 
 app.get("/chats" , async (req , res) => {
     let chats = await Chat.find();
-    // console.log(chats);
+    console.log("chat" , chats);
     // res.send("working.");
     res. render("index.ejs" , {chats});
 });
-
+ 
 
 // ! new & create route
 /*
