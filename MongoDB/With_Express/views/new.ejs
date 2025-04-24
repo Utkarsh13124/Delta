@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>write New Chat</title>
+    <title>Write New Chat</title>
+    <link rel="stylesheet" href="/new.css">
 </head>
 <body>
-    <h2>write your chat</h2>
-    <form action="/chats" method="post">
-        <input type="text" placeholder="Who are your" name="from"> <!-- name me jo bhi likege wo backened me work dega.-->
+    <h2 id="chat-heading">Write Your Chat</h2>
+    <form id="chat-form" action="/chats" method="post">
+        <input type="text" id="sender" class="chat-input" name="from" placeholder="Who are you?">
         <br>
-        <textarea name="msg" >Write your Msg here..</textarea>
+        <textarea id="message" class="chat-textarea" name="msg" placeholder="Write your message here..."></textarea>
         <br>
-        <input type="text" placeholder="Add receiver" name="to"> <!-- name me jo bhi likege wo backened me work dega.-->
+        <input type="text" id="receiver" class="chat-input" name="to" placeholder="Add receiver">
         <br>
-        <button>
-            Create Chat
-        </button>
+        <button id="submit-btn">Create Chat</button>
     </form>
 </body> 
 </html>
