@@ -1,0 +1,19 @@
+approach upar se ek taraf se cheezo ko style dete jao.
+
+we need to make a sidebar page for a photography website.
+
+displaying icons in place of label for better views 
+
+
+jab humhe kisi link pr nhi jana hota hi , anchor tab se , hum waha baad me wo link bharenge , to hum # likh dete hi.
+
+
+1vh --> 1% of viewport height
+
+different types ke connector padhe the , .menu .log . a
+
+
+opacity se invisible hota hi , display none se gayab ho jata hi completely.
+
+
+IMP :- in selctor :- space is very important, as it make a item to child , or sibling

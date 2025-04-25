@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .main_box {
+    background: url("image.png") no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Toggle button (hamburger) */
+  .btn_one i {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s linear;
+  }
+  
+  /* Sidebar main box */
+  .sidebar_menu {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* darker background for better contrast */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+    z-index: 1;
+  }
+  
+  /* Top logo */
+  .sidebar_menu .logo {
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+  }
+  
+  .sidebar_menu .logo a {
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  /* Close (X) button */
+  .sidebar_menu .btn_two i {
+    color: white;
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    left: 275px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s linear;
+  }
+  
+  /* Menu items */
+  .sidebar_menu .menu {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+  }
+  
+  .sidebar_menu .menu li {
+    list-style: none;
+    margin: 6px;
+    padding: 14px 20px;
+  }
+  
+  .sidebar_menu .menu i,
+  .sidebar_menu .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .sidebar_menu .menu i {
+    padding-right: 8px;
+  }
+  
+  /* Social icons */
+  .sidebar_menu .social_media {
+    position: absolute;
+    left: 25%;
+    bottom: 50px;
+  }
+  
+  .sidebar_menu .social_media i {
+    color: white;
+    opacity: 0.5;
+    padding: 0 5px;
+    transition: 0.3s;
+  }
+  
+  /* Hide checkbox */
+  #check {
+    display: none;
+  }
+  
+  /* Hover effects */
+  .sidebar_menu .menu li:hover {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  }
+  
+  .btn_one:hover i {
+    font-size: 40px;
+  }
+  
+  .btn_two:hover i {
+    font-size: 30px;
+  }
+  
+  .sidebar_menu .social_media i:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  /* Checkbox toggling */
+  #check:checked~.sidebar_menu {
+    left: 0;
+  }
+  
+/* When the checkbox is checked, we set opacity of hamburger icon to 0 */
+#check:checked~.btn_one i {
+    opacity: 0;
+  }
+  
+  
