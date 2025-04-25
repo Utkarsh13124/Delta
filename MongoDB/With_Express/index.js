@@ -107,7 +107,7 @@ app.get("/chats" , async (req , res) => {
     })
 
     //Create route
-    app.post("/chats" , (req , res) => {
+    app.post("/chats" , async (req , res) => {
         let { from , to , msg} = req.body; // but for post request we need to parse the data.
         let newChat = new Chat({
             from : from, 
@@ -117,7 +117,8 @@ app.get("/chats" , async (req , res) => {
         });
         // console.log(newChat);
        // Db ke ander koi bhi operation krna ek asynchronous process hi.
-        newChat.save().then( res => console.log("chat  was saved")).catch( err => console.log(err));
+        await newChat.save();
+        // .then( res => console.log("chat  was saved")).catch( err => console.log(err));
         // res.send("working");
         res.redirect("/chats")
     })

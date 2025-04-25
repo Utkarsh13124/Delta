@@ -47,6 +47,24 @@
 //! Google Fonts -> library of fonts
 /*
     https://fonts.google.com
+        select the html link to connect
+        copy the css to style.css
+
+
+    preconnect ;- ki browser ko in website se connect krne ki need ho sakti hi, 
+
+
+*/
+
+//! icons
+/*
+    google icons 
+        include static link for the icon you want to use, 
+        there also insertion code is given for that icon
+
+    font-awesome
+        cdnjs pr fontawesome library ke liye tag hi.
+        go to font-awesome and select hte icon and their code for html, also we can make icon for react , vue.js
 
 */
 
