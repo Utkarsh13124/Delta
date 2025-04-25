@@ -1,3 +1,8 @@
+learning : - 
+
+  practice selectors, creating sidebars.
+  mdn is useful in all that
+
 approach upar se ek taraf se cheezo ko style dete jao.
 
 we need to make a sidebar page for a photography website.
