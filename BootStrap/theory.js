@@ -1,3 +1,7 @@
+//! align item 
+//! cheezo ko tood todkr krenge to bhut easy rhengi.
+
+
 //! What is Bootstap?
 /*
     just like forms, buttons, etc.
@@ -82,4 +86,28 @@
 //!  navbar
 /*
     fixed-top class tofixed nav at top
+*/
+
+//! cards
+
+//! flexbox based -  grid Layout
+/*
+    each row is divided into 12 equally spaced column.
+
+    Grid options ki helps se hum responsive bna sakte hi
+
+
+*/
+
+//! form 
+/*
+    mb-3 --> margin bottom 3
+
+   ? select --> to create dropdown
+        isme hu m default ek option select krke rakh sakte hi
+
+    Checkboxes
+
+    layout:- 
+
 */
