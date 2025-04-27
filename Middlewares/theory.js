@@ -75,9 +75,30 @@ in Express it is:-
         means o useful information hi , use terminal ke ander ya console ke ander print krrna hi.
         like req.time , res.time , req.method , hostname
 
+    we also can add something to request.
+    agar hum middlewares ko last me likh denge , routes ke baad to , pehle route matching hoga , agar ho gya to response yhi se return ho jayega. 
 
 */
 
+//! app.use()
+    /*
+        middlewares app.use() ke ander callbacks ki tarah kaam krta hi.
+
+        path argument & callback
+            callback could be middleware function, series of middle ware function , or array of middleware function. 
+             agar hum app.use() ke ander kkuch path nhi likhte , to humara middleware hr ek path ke liye work krega. 
+                and also uske subroute ke liye bhi krega.
+    
+        jab hum root path pass krte hi  , ya kuch nhi krte to use root path hi  samjha jata hi , to saare routes to route path se start hote hi , isi liye sabhi ke liye chlta hi.
+
+
+        ! middleware ke ander hum aauthetication krwa sakte hi.
+        ! sending response for 404 & also we send some interesting cartoons long with it.
+          ? mAKE SURE TO PLACE IT IN THE END.
+            app.use((req , res) => {
+                res.send("Page is not found.");    
+            })
+    */
 
 
 
