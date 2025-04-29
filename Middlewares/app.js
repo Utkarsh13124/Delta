@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-
+const ExpressError = require("./ExpressError");
 //! middleware is written , which can send response to request of some route, then the request does not reach till api/route
 
 // //! our First middleware function
@@ -45,7 +45,12 @@ const checkToken = (req , res , next) => {
     if(token === "giveaccess"){
         return next();
     }
-    res.send("ACESS DENIED!");
+    // res.send("ACESS DENIED!");
+   //! Sending custum error. 
+    //! Using inbuilt class.
+    // throw new Error("ACESS DENIED!"); //? Error is inbuilt Class in JS 
+    //! Using custom class 
+    throw new ExpressError(401 , "Access Denied!");
 };
 //! app.use("/api"  , checkToken ); // alt option is discussed below
 
@@ -67,10 +72,27 @@ app.get("/random" , (req , res) => {
     res.send("Hi I am Random Page.");
 });
 
-app.listen( 8080 , () => {
-    console.log("server is started.")
-})
 
+
+app.get("/err" , (req , res) => {
+    abcd = abcd; //! jaise hi error generate hua , waise hi hum niche wale error handling middleware me chale gye. 
+});
+ //! Error Handling Middleware
+    app.use((err , req , res , next) => {
+        let {status , message} = err;
+        // console.log(err);
+        // console.log("------------ERROR--------------------");
+        // next(err); 
+      // showing generated error on frontend.  
+        // res.send(err); // in api?queryaccess call , when middleware calls to next middleware function wy throwing error, then we get this , which we are using the same genrated error , to throw on frontened .
+        res.status(status).send(message);// error send krna with msg.
+    })
+
+    // app.use((err , req , res , next) => {
+    //     // console.log(err);
+    //     console.log("------------ERROR 2--------------------");
+    //     next(err);
+    // })
 
 
 
@@ -78,18 +100,16 @@ app.listen( 8080 , () => {
     //? Make sure you place it in end.
     // - Error handling middleware.
 app.use((req , res) => {
-    res.status(404).send("Page is not found.");    
+    res.status(404).send("Page is found!");    
+})
+
+app.listen( 8080 , () => {
+    console.log("server is started.")
 })
 
 
 
 
 
-
-
-
-
-
-
-
+//! custom error Classes
 
