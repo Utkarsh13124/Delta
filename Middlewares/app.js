@@ -50,7 +50,7 @@ const checkToken = (req , res , next) => {
     //! Using inbuilt class.
     // throw new Error("ACESS DENIED!"); //? Error is inbuilt Class in JS 
     //! Using custom class 
-    throw new ExpressError(401 , "Access Denied!");
+    throw new ExpressError(401 , "Access Denied!!");
 };
 //! app.use("/api"  , checkToken ); // alt option is discussed below
 
@@ -72,6 +72,10 @@ app.get("/random" , (req , res) => {
     res.send("Hi I am Random Page.");
 });
 
+app.get("/admin" , (req , res) => {
+    throw new ExpressError( 403 , "Access to Admin is forbidden.");
+    
+})
 
 
 app.get("/err" , (req , res) => {
@@ -79,7 +83,7 @@ app.get("/err" , (req , res) => {
 });
  //! Error Handling Middleware
     app.use((err , req , res , next) => {
-        let {status , message} = err;
+        let {status = 500, message = "SOME ERROR!!"} = err;
         // console.log(err);
         // console.log("------------ERROR--------------------");
         // next(err); 
@@ -111,5 +115,6 @@ app.listen( 8080 , () => {
 
 
 
-//! custom error Classes
+//! Activity 
+ //? Create an admin route &  send an error with a 403 status code.
 

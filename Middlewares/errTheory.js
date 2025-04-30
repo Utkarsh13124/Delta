@@ -42,3 +42,112 @@
     5 - server side error
 
 */
+
+
+//! Handling Async Error
+/*  
+    Suppose mongo DB ya Mongoose koi error send kr de.
+
+    Normal Process :- Make expressError.js file  , definig custom error and custom class,call super first. 
+
+    In case of Async error.
+        Asynchronous function ke case me error throw hone ke baad express bydefault  next() ko call nhi lagata.
+        Asynchronous function ke ander hum just error ko throw nhi krenge, 
+            ? hum next ke ander apne error ko pass krenge.
+      * will work in Normal function
+        throw new ExpressError(404 , "Chat not found.");
+      * Will work in async funnction
+           throw new ExpressError(404 , "Chat not found.");
+
+    Try-catch & AsyncWrap is solution. 
+      hum async errors ke liye asyncWrap banayege.
+
+*/
+
+
+
+
+
+//! using try-Catch
+/*
+    used generally with async and await.
+
+    single specific error ko hum if se bhi tackle kr sakte hi . 
+
+*/
+
+
+//! using Wrap-async
+/*
+    utility for writing try-catch  better way , AS TRY CATCH IS BULKY
+
+   We will make a  wrapAsync/ExpressWrapAsync function , that is returning a function and jiska argument bhi functionn hi.
+    in short taking a function , returning new function
+
+    NEW FUNCTION WILL HAVE (REQ , RES , NEXT)
+     AND RETURNING FUNCTION WILL RUN THE ARGUMENT FUNCTION WITH CATCH
+
+     function wrapAsync(fn){
+        return function (req , res , next){
+            fn(req , res, next).catch((err) => next(err));
+        }
+     }
+
+        const hello = () => console.log("Hello");
+
+        1st way => hello();
+
+        2nd way
+        const retFn = asyncWrap(hello);
+        console(retFn());
+
+    ? Applying above logic : - for modifying trycatch
+        we will pass our async function of routes into wrapAsync as callback
+         and then our wrapAsync will excute it as try-catch
+
+app.get("/chat:id" , asyncWrap( async (req, res, next) => {
+        let {id} = req.params;
+        let chat = await = Chat.findById(id);
+        if(!chat){
+            next(new ExpressError(500 , "Chat not Found."));    
+        }
+        res.render("edit.ejs", { chat } );
+    })
+);
+
+
+*/
+
+//! mongoose Errors
+/*
+    like validation errors , caste errors 
+
+    Custom error , for Specific Error 
+      Each type of error has a name, that can be accessed through 
+        ? err.name attribute
+        then we could have if condition. 
+         also if we have lots of work to do after getting the error , like saving them in docs , printing , etc , then we cna make a //! handleValidationErro function for it
+
+        if(err.name === "ValidationError"){
+            err = handleValidationError(err);
+        }
+        next(err);
+
+    
+    const handleValidationError = (err) => {
+            console.log("This is a validation error.");
+            console.dir(err);
+            return err;
+        }
+        
+
+
+*/
+
+
+
+
+
+
+
+
