@@ -23,7 +23,7 @@ async function main() {
         {
             // yaha pr hume id store krwana hi , jiska type hota hi -> Schema.Types.ObjectId
             type : Schema.Types.ObjectId,
-            ref : "Order", // humhe ye batana padega ki jo humari id aa rhi hi , wo kaha se aa rhi hi. 
+            ref : "Order", // humhe ye batana padega ki jo humari id aa rhi hi , wo kon se model se aa rhi hi. 
         },
     ],
  });
@@ -33,24 +33,27 @@ async function main() {
  const Order = mongoose.model("Order", orderSchema);
  const Customer = mongoose.model("Customer", customerSchema);
 
- const addCustomer = async () => {
-    let cust1 = new Customer({
-        name : "Rahul Kumar",
-    });
-    //! adding orders
-        // way - 1push the id , 
-        // way - 2 push the child document --> is case me bhi mongoose dikhayega first time ki object push hua , lekin mongo db me sirf id hi push hui hi , we can again in mongodb as well as mongoose
-    let order1 = await Order.findOne({item : "Chips"});
-    let order2 = await Order.findOne({item : "Cocolate"});
+//  const addCustomer = async () => {
+//     let cust1 = new Customer({
+//         name : "Rahul Kumar",
+//     });
+//     //! adding orders
+//         // way - 1push the id , 
+//         // way - 2 push the child document --> is case me bhi mongoose dikhayega first time ki object push hua , lekin mongo db me sirf id hi push hui hi , we can again in mongodb as well as mongoose
+//     let order1 = await Order.findOne({item : "Chips"});
+//     let order2 = await Order.findOne({item : "Cocolate"});
 
-    cust1.orders.push(order1); // only id will be pushed , could cross checked in DB.
-    cust1.orders.push(order2);
+//     cust1.orders.push(order1); // only id will be pushed , could cross checked in DB.
+//     cust1.orders.push(order2);
 
-    let res = await cust1.save();
-    console.log(res);
- }
+//     let res = await cust1.save();
+//     console.log(res);
+//  }
 
- addCustomer();
+//  addCustomer();
+
+
+
  // * commented after use , else multiple times the data would be inserted.
 // const addOrders = async () => {
 //     let res = await Order.insertMany([
@@ -65,3 +68,14 @@ async function main() {
 // addOrders();
 
 
+//! populate --> is very useful , when referenceis used . Populate is used for extrect.
+/*
+    replacing id by the object, 
+    replacingg reference by referenced. we say populate ho gya. 
+*/
+const findCustomer = async () => {
+    let result = await Customer.find({}).populate("orders"); //  orders is jo humhe populate krwana hi , customer ke ander.
+    console.log(result[0]);
+}
+
+findCustomer();

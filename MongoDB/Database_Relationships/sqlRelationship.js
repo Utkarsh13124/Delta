@@ -84,10 +84,22 @@ many < 500 ,1000
         ref -> customer.js in Models
 */
 
-
 //! populate method.
+/*
+    customer.js
+
+*/
 
 
+//! One to Many Approach  - 3 One to Squillions
+/*
+    store a reference to the parent document inside the child.
+        we are doing opposite of approach  2. 
+
+    Ex : - instagram , Quora. 
+        User could have multiple post.
+        Eise cases me  hum , user ke liye save krwaye ki uske kitne post hi , usse accha hi , ki hum ye save krwaye ki post ka user kon hi.
+*/
 
 
 

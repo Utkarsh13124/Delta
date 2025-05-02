@@ -1,0 +1,23 @@
+MongoDb 6 rules for desigining new models
+
+1. agar storage option hi , to store krao , naya model mt bnao.
+2. Needing to access an  object on its own is a compelling reason not to embed it.
+3. array storing many , should not exceeds 100s
+    use array of id - references for 1000s
+    high cardinality  me parent  ko embed kra dena
+
+4. dont be  afraid of apllication level joins
+5. consider the read-to-write ratio with denormalization.
+    denormalization -> data ko dupliate krke store krna. 
+    we do denormalization , when we need to show certain things everytime , along with referring we also saved that thing also .
+     like post me reference id user ki store krwana , sath hi sath username bhi alag se store krwana .
+
+     isme humhe edit krne me dikkat hota hi,
+     Jisko read krna hota hi only -> uska denormalization krna easy hota hi.
+6. humare upar depend krta hi ki hum kaise cheezo ko banate hi , as per our needs.
+
+
+
+Two - way referencing ;- need to read.
+
+
