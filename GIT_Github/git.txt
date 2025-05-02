@@ -5,6 +5,8 @@ Git
      track history
      help to collaborate.
 
+ls --> list all file, 
+ls -a --> show hidden file as well
 
 Github
     website
@@ -30,9 +32,52 @@ Using Git
 
 
 Clone Command :-
+    cloning a repository on our local machine. 
+        download krke apne system ke ander lana.
+
+        git clone <--link-->
+        jis folder ke ander save krwana hi , uske ander jao , aur ye command run kro. 
+
+    we do cloning for doing changes on project. 
 
 
+Status Command :- 
+    display the status of code.
+    
+    Untracked --> Unmodified  --> modified ---> staged
 
+    Untracked --> add the file --> Unmodified
+    Unmodified --> remove the file -->  Untracked
+    unmodified --> edit the file --> modified 
+    modified --> stage --> staged
+    staged --> commit --> unmodified
+        staged mtlab humne unhe stage pr khada kr diya.
+
+
+Add & Commit 
+    add 
+        git add <--filename-->
+        git add . 
+
+    commit 
+        record of change.
+        :- One set of reasonably good changes.
+
+    push 
+        git push origin main
+            origin -->jagah ka naam jaha  se sari cheeze suru hi thi.
+                jaha  se https link liya that
+
+            main :- branch ka naam hi.
+
+
+Sending our local repo to Github
+Init Command 
+
+    git init    --> to make a new repo at Github
+      jisko banana hota hi , usi ke ander jaake krte hi.
+
+    
 
 
 
