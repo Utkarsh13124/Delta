@@ -29,13 +29,26 @@ async function main() {
  });
 
 
+//! Writing Pre middleware for mongoose query findOneAndDelete. 
+    // customerSchema.pre("findOneAndDelete" , async() => {
+    //     console.log("PreMiddleware.");
+    // })
+    
+    customerSchema.post("findOneAndDelete" , async(customer) => { // jo ye data aa rha hi , wo deleted object hi.
+        // console.log("postMiddleware : " , customer);
+        if(customer.orders.length){
+            let res = await Order.deleteMany({ _id : { $in : customer.orders} });
+            console.log(res);
+        }
+    })
+
  // part - 2 making a model
  const Order = mongoose.model("Order", orderSchema);
  const Customer = mongoose.model("Customer", customerSchema);
 
 //  const addCustomer = async () => {
 //     let cust1 = new Customer({
-//         name : "Rahul Kumar",
+//         name : "utkarsh",
 //     });
 //     //! adding orders
 //         // way - 1push the id , 
@@ -73,9 +86,52 @@ async function main() {
     replacing id by the object, 
     replacingg reference by referenced. we say populate ho gya. 
 */
-const findCustomer = async () => {
-    let result = await Customer.find({}).populate("orders"); //  orders is jo humhe populate krwana hi , customer ke ander.
-    console.log(result[0]);
+
+// const findCustomer = async () => {
+//     let result = await Customer.find({}).populate("orders"); //  orders is jo humhe populate krwana hi , customer ke ander.
+//     console.log(result[0]);
+// }
+
+// findCustomer();
+
+const addCust = async () => {
+    let newCust = new Customer({
+        name : "Karan",
+    });
+
+    let newOrder = new Order({
+        item : "Pizza" , 
+        price : 250, 
+    });
+
+    newCust.orders.push(newOrder);
+
+    // await newOrder.save();
+    await newCust.save();
+
+    console.log("added new customer.");
 }
 
-findCustomer();
+// addCust();
+
+
+//! Handling deletion :- on deleting customers , his orders should be deleted automatically.
+
+const delCust = async () => {
+    let res = await Customer.findByIdAndDelete('681471e13d679702cee5845d');
+    console.log(res);
+}
+
+delCust(); // by this only customer is being deleted , nnot his orders
+
+// for deleting orders also we can use 2 middlewares.
+/*   
+        findOneAndDelete() is a queryMongooseMiddleware.
+    findbyIdAndDelte() --> ander hi ander findOneAndDelete middleware ko call krta hi. 
+        agar hum findOneAndDelete ke liye ek aur middleware lagayenge, to wo pehle call hoga. 
+            jo middleware laga rhe hi , wo pre ya post middleware ho sakta hi.
+
+        currently we are using post middleware to delete the orders, post middleware ke ander jodeletedObject ka poora data hota hi.
+*/
+
+

@@ -102,8 +102,23 @@ many < 500 ,1000
 */
 
 
+// ! Handling Deletion --> Deleting related model( like 1 to many )
+/*
+    Users & Posts
+        1. Case - 1 :- Deleting User --> should delete all post.
+        2. Case - 2 : - Deleting User , But not the post , ( post user will be shown as User not exist , deleted account )
 
+    Case 1 .
+        We can have multiple solution.
 
+        for 1 to M , like customers and orders , customer carry list of orders array. 
+            before deleting customer , traverse on his order , and delete the orders , then customwer.
+
+        Mongoose also provide many Middlewares for it. 
+
+        
+
+*/
 
 
 
