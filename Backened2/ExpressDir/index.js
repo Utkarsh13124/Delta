@@ -22,7 +22,7 @@ const app = express(); // running express function , and storing its result
 /*
     recieving request :=> agar hum apne localhost pr kuch search krenge, ya uske kisi route pr jaane ki koshish krenge, tab ek request jayegi jise hum jo ki server side pr baithe hue ko sunne ke liye use() method ka use krne padega.
     port pr hum listen krte hi app.use() se hum request ko recieve krte hi.
-    jitni baar hum port pr request bhejenge , chahe browser se ,ya postman ya hopscotch se , humara app.use() wala code run hoga.
+    jitni baar hum port pr request bhejenge , chahe browser se ,ya postman ya hoppscotch se , humara app.use() wala code run hoga.
     app.use( (req , res)=> ){
 
 

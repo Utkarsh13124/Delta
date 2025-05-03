@@ -1,6 +1,6 @@
 // Api se hi hum state wise search krne ka option de sakte , using dropdown we can select. and send as state wise search. 
 
-let url = "http://universities.hipolabs.com/search?name="; // this we get from documentation and when we are working at hopscotch
+let url = "http://universities.hipolabs.com/search?name="; // this we get from documentation and when we are working at hoppscotch
 
 let input = document.querySelector("input");
 let button = document.querySelector("button");

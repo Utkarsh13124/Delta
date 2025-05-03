@@ -19,7 +19,7 @@ app.get( "/register" , (req , res) => {
 
 /*
     hum post request ke ander body me data send kr sakte hi , jo url me nhi dikhegi , but backened me server pr dikhegi, 
-    hopscotch me post ke saath body ka option rehta hi.
+    hoppscotch me post ke saath body ka option rehta hi.
 
     !handling post request
         post request me kaise request body ke ander data bheje ya fetch kre, jaise get me req.query  se krte hi.

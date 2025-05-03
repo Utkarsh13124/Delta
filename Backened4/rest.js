@@ -100,7 +100,7 @@ DELETE      /posts/:id  to delete specific post     DESTROY ROUTE //! by convent
             to update specific post( as id  username to same rhega.)
             we can also ue PUT request uska syntax bhi similar rheta hi.
 
-            sending patch request with hopscotch, humhe request body ko edit krke usme jo , cheeze change krni hi use , key value ki form me bhejenge.
+            sending patch request with hoppscotch, humhe request body ko edit krke usme jo , cheeze change krni hi use , key value ki form me bhejenge.
             
     */
 
