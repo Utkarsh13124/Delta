@@ -1,7 +1,10 @@
 import './App.css'
+import Product from './Product.jsx'
 
 function App() {
-  return <h1>Hello World</h1>;
+  return <>
+    <Product title="Pen" price="20" />
+  </>;
 }
 
-export default App
+export default App;
