@@ -47,11 +47,55 @@
 // ? Homework --> make a amazon card.
 
 
+//! LEC - 3
+/*
+    ONCLICK event is used to handle  clicks event
+
+*/
+
+
+/*
+   !  Handling non click events
+   OnMOUSEOVER --> to handle even
+
+   Generaly on add krke hum eventhandlers bnate hi.
+
+   * function ka reference dena hi , event ko handle krte hue, use execcute nhi krna.
+
+*/
+
+/*
+! Event object
+    jab bhi koi event hota hi , to by default event objet handler ko pass hota hi.
+
+*/
+
+//! State in react & Hooks
+/*
+    component ko rerender krwana on some change. 
+
+    Supose humne counter naam ka app bnaya , to usme agar hum count pr click krege to count variable to increase ho jayega, but  wo component jike jariye render hoke count display ho rha tha , 
+     usko rerender krwana hoga to in sabke liye hum states ka use krenge
 
 
 
+ */
 
 
+
+//! Use State Hook
+/*
+    const [state , setState] = useState(initialState )
+
+*/
+
+
+/*
+    ! Closure -> inner function ke pass outer functions ke variable ki value hoti hi. 
+
+    ? How rerender works?
+        
+*/
 
 
 
