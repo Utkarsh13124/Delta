@@ -94,7 +94,8 @@
     ! Closure -> inner function ke pass outer functions ke variable ki value hoti hi. 
 
     ? How rerender works?
-        
+        variable ki value re-rende ki state pr update hoti hi . 
+        naki 
 */
 
 
