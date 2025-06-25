@@ -95,9 +95,32 @@
 
     ? How rerender works?
         variable ki value re-rende ki state pr update hoti hi . 
-        naki 
+        naki function call pr.
 */
 
+//! callback in set state function
+/*  
+   simple  update krenge multiple time to ek hi baar chalega.
+    setState function asynchronous function ;
+        depends on current value.
+   if needed to update multiple time on single click.
+    use callbacks
+
+
+    One line me :- agar value old value pr depend kr rhi hi , and need to use multiple time set function use callbacks , else normal code.
+
+    setState((prevVal) => prevVal + 1);
+    setState(prevVal => prevVal + 1);
+
+*/
+
+//! More about state :- 
+    /*
+        component re-render tabhi hota hi , jab state me change aata hi.
+
+        init --> passing init function by refernence ,, executed only once,
+        init() --> passing by value will re-render multiple times.
+    */
 
 
 

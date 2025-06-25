@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+// for studigng use state hook
 export default function Counter(){
     let [count , setCount] = useState(0);
 
