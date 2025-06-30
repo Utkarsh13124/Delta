@@ -7,9 +7,8 @@ export default function(){
     let [array , setArray] = useState([]);
 
     let addTask = () => {
-        setArray((prevArray) => {
-            return [...prevArray , newTask];
-        })
+        setArray(prev => [...prev, newTask]);
+
 
         setNewTask("");
     }

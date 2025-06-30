@@ -1,6 +1,7 @@
 Docs/
 Progress Track/
 node_modules/
+**/AirMojo Notes/
 
 .env
 homework.txt
