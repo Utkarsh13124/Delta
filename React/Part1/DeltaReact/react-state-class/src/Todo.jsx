@@ -3,12 +3,12 @@ import {v4 as uuidv4} from "uuid";
 
 export default function(){
 
-    let [todos , setTodos] = useState([{ task : "sample-task" , id : uuidv4() }]); 
+    let [todos , setTodos] = useState([{ task : "sample-task" , id : uuidv4() , isDone : false }]); 
 
     let [newTodo , setNewTodo] = useState("");
 
     let addTask = () => {
-        setTodos(prevTodos => [...prevTodos, { task: newTodo, id: uuidv4() }]);
+        setTodos(prevTodos => [...prevTodos, { task: newTodo, id: uuidv4() , isDone : false }]);
 
         setNewTodo("");
     }
@@ -31,20 +31,13 @@ export default function(){
         )    
         )
     };
-let upperCaseAllOne = (id) => {
+let markAsDone = (id) => {
     setTodos(prevTodos =>
-        prevTodos.map(todo => {
-            if (todo.id === id) {
-                return {
-                    ...todo,
-                    task: todo.task.toUpperCase(),
-                };
-            } else {
-                return {
-                    ...todo
-                };
-            }
-        })
+        prevTodos.map(todo => 
+            todo.id === id 
+                ? { ...todo, isDone: true }
+                : todo  // Just return the original todo
+        )
     );
 };
 
@@ -79,9 +72,9 @@ let upperCaseAllOne = (id) => {
             <ul id="taskList">
                 { 
                     todos.map((todo) => (  
-                        <li key={todo.id}>{todo.task}     
-                        <button onClick={() => deleteTask(todo.id)}>Delete</button>
-                        <button onClick={() => upperCaseAllOne(todo.id)}>Uppercase</button>
+                        <li key={todo.id}  style={ {textDecoration :  todo.isDone ? "line-through" : "none"} }>{todo.task}     
+                            <button onClick={() => deleteTask(todo.id)}>Delete</button>
+                            <button onClick={() => markAsDone(todo.id)}>Mark as Done</button>
                         </li>  // jab  hum arrow function ki form pass kr rhe hi , to wo yha pr execute nhi kra rha hi , wo ek copy create krta hi.        
                     ))
                 }

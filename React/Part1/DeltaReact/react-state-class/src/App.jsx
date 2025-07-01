@@ -1,16 +1,16 @@
-import Counter from './Counter'
 import './App.css'
-import LudoBtn from './LudoBtn'
-import Todo from './Todo'
+import { sum } from './helper'
+import Lottery from './Lottery'
 
 
 function App() {
-  // const [count, setCount] = useState(0)
+  let winningCondition = (ticket) => {
+    return sum(ticket) == 15;
+  }
 
   return (
     <>
-     <Todo/>
-     {/* <LudoBtn/> */}
+         <Lottery n={3} winningCondition={winningCondition}></Lottery>
     </>
   )
 }
