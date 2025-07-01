@@ -1,26 +1,76 @@
 import { useState } from "react"
+import {v4 as uuidv4} from "uuid";
 
 export default function(){
 
-    let [newTask , setNewTask] = useState("");
+    let [todos , setTodos] = useState([{ task : "sample-task" , id : uuidv4() }]); 
 
-    let [array , setArray] = useState([]);
+    let [newTodo , setNewTodo] = useState("");
 
     let addTask = () => {
-        setArray(prev => [...prev, newTask]);
+        setTodos(prevTodos => [...prevTodos, { task: newTodo, id: uuidv4() }]);
 
-
-        setNewTask("");
+        setNewTodo("");
     }
 
+    let deleteTask = (id) => {
+
+        // console.log(e);
+        setTodos(prevTasks => prevTasks.filter(task => task.id !== id));
+
+    }
+
+    let upperCaseAll = () => {
+        setTodos( prevTodos => 
+            prevTodos.map( todo => ( 
+                { // this for returning object
+                    ...todo ,
+                    task: todo.task.toUpperCase(),
+                }
+            )
+        )    
+        )
+    };
+let upperCaseAllOne = (id) => {
+    setTodos(prevTodos =>
+        prevTodos.map(todo => {
+            if (todo.id === id) {
+                return {
+                    ...todo,
+                    task: todo.task.toUpperCase(),
+                };
+            } else {
+                return {
+                    ...todo
+                };
+            }
+        })
+    );
+};
+
+/*
+let upperCaseAllOne = (id) => {
+    setTodos( prevTodos =>
+        prevTodos.map(todo =>
+            todo.id === id
+                ? { ...todo, task: todo.task.toUpperCase() }
+                : { ...todo }
+        )
+    );
+};
+*/
+
+
+
+
     function updateNewTask(e){
-        setNewTask(e.target.value);
+        setNewTodo(e.target.value);
     }
 
     return (
         <>  
            
-            <input type="text" placeholder="add a task" value={newTask} onChange={updateNewTask}/>
+            <input type="text" placeholder="add a task" value={newTodo} onChange={updateNewTask}/>
             <br /><hr />
             <button onClick={addTask}>Add Task</button>
 
@@ -28,11 +78,15 @@ export default function(){
             <h4>Tasks Todo</h4>
             <ul id="taskList">
                 { 
-                    array.map((element) => (  
-                        <li>{element}</li>
+                    todos.map((todo) => (  
+                        <li key={todo.id}>{todo.task}     
+                        <button onClick={() => deleteTask(todo.id)}>Delete</button>
+                        <button onClick={() => upperCaseAllOne(todo.id)}>Uppercase</button>
+                        </li>  // jab  hum arrow function ki form pass kr rhe hi , to wo yha pr execute nhi kra rha hi , wo ek copy create krta hi.        
                     ))
                 }
             </ul>
+            <button onClick={upperCaseAll}>Uppercase All</button>
         </>
     )
 }

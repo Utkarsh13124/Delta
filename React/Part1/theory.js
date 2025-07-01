@@ -1,3 +1,26 @@
+/*
+    ? Important 
+    prefer --> that returns a copy 
+        not prefer -> mutates the array
+
+        for adding --> spread , concat
+            not prefered --> push , unshift
+        for delete --> slice , filter
+            --> pop , shift , replace
+        for replacing 
+            --> map
+            not prefer -- splice , arr[i] = assignment
+        sorting 
+            reverse , sort
+            prefer --> copy first and then sort. 
+        
+
+        update ka funda , jo same hi , usko spread se copy kro , phir changes ko updates kro.
+*/
+
+
+
+
 //! JS Library 
 /*
     Library for creating UI
