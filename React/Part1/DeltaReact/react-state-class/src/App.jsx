@@ -1,6 +1,7 @@
 import './App.css'
 import { sum } from './helper'
 import Lottery from './Lottery'
+import Form from './Form'
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
 
   return (
     <>
-         <Lottery n={3} winningCondition={winningCondition}></Lottery>
+    <Form></Form>
+         {/* <Lottery n={3} winningCondition={winningCondition}></Lottery> */}
     </>
   )
 }
