@@ -1,20 +1,28 @@
 import './App.css'
-import { sum } from './helper'
-import Lottery from './Lottery'
-import Form from './Form'
-
+import CommentsForm from '../CommentsForm'
 
 function App() {
-  let winningCondition = (ticket) => {
-    return sum(ticket) == 15;
-  }
+
 
   return (
     <>
-    <Form></Form>
-         {/* <Lottery n={3} winningCondition={winningCondition}></Lottery> */}
+      <CommentsForm/>
+   
     </>
   )
 }
 
 export default App
+
+//  {
+//    /* <Form></Form> */
+//  }
+//  {
+//    /* <Lottery n={3} winningCondition={winningCondition}></Lottery> */
+//  }
+  // let winningCondition = (ticket) => {
+  //   return sum(ticket) == 15;
+// }
+  //import { sum } from './helper'
+// import Lottery from './Lottery'
+// import Form from './Form'
