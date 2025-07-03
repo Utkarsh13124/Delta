@@ -1,12 +1,12 @@
 import './App.css'
-import CommentsForm from '../CommentsForm'
+import SearchBox from './SearchBox'
 
 function App() {
 
 
   return (
     <>
-      <CommentsForm/>
+      <SearchBox/>
    
     </>
   )
