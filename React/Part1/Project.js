@@ -4,3 +4,4 @@
 
 */
 
+// state variable ki access hr  ek funtion ke pass hoti hi.
