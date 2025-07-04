@@ -1,0 +1,8 @@
+flex : 1 ;    
+kehta hi ki baakiyo ko wo jitna jagah maang rhe utna de do , baaki bachi hui jagah mujhe de do. 
+
+
+
+
+color :- 
+    screenshot leke color picker ki website pr add kr do. 
