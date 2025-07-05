@@ -79,13 +79,99 @@ Init Command
 
     
 
+Pushing local repo 
+    create new repo
+    copy http link  
+        git remote add origin <--link--> 
+
+
+
+Work flow
+
+
+git branch 
+    collboration, 
+    parallelism , 
+    hierarchy
+
+branch command  
+    git branch ( to check branch )
+    git branch -M main ( to rename branch )
+    git checkout <- branch name ->    ( to navigate )
+    git checkout -b <- new branch name =>   ( to create new branch )
+    git branch -d <- branch name ->    ( to delete branch )
 
 
 
 
+Merging Branches
+    two ways :- 
+        git diff <- branch name -->    (to compare commits , branches , files , & more )
+
+        git mergee <- branch name -->    ( to merge 2 branches )
+
+      or 
+         Create a PR  
+            ye branch ko merge krwata hi. 
+
+            hum ek pull request bhejte hi , author ko , ki humne kuch feature build kiya hi , hum isko merge krna chahte hi.
+             phir jo senior developer hote hi , wo humare pr ko check krte hi , khi kuch changes krna hota hi , to wha pr comment krte hi. 
+             aur batate hi , ye changes kro , phir hum aapki pr ko merge krege
+
+
+            Jiski repo hoti hi , usko merge ka option dikhega, abhi humhe dikh ha hi , kyuki humne hi create kiya hi.
+            PR ko merge krna bhi ek Commit hota h. 
+
+
+Pull Command    
+    merge humne github ke upar kiya hi , lekin wo changes abhi vscode ya local system me nhi dikhege, 
+    to humhe pull krna padega.
+
+    git pull origin main
+        opposite of push
+
+// Merge Conflict 
+    jab same jagah do alag alag changes hue ho . 
+
+
+
+// merging in local 
+    accept , recject , copare , both accept 
 
 
 
 
+// Fixing Mistakes . 
+    Case - 1 Staged changes 
+        matlab humne aise changes ko add kr diya hi , jo humhe chahiye hi nhi . 
+
+        unAdd kaise krein
+
+        git reset <-filename ->     ( for particlular file ast add )
+
+        git reset      ( for all last add in last time )
+
+    Case 2 :- Commit changes ( for one commit )
+         git reset HEAD~1   
+                basically head pointer ( jo ki latest commit ko represent krta hi )
+                head ko 1 commit piche bhej do . 
+
+    
+    Case 3 commited changes ( for many  commits )
+        git log      se hum coomit ka hash fetch krenge. 
+            isse humare paas sare ke saare commits ki information aa jayegi. 
+
+        git reset <- comit hash ->
+
+        git reset --hard <-commit hash-->      
+            ye commit ko waps lega saath hi  , usko file se remove bhi kr dega.
 
 
+What is forking ? 
+    agar hum kuch changes krna chahte hi , kisi aur ke repo me 
+    ya contribute krna chahte hi
+
+    fork krne se hum uski ek copy bna lete hi , apne account me.
+
+    changes krne ke baad hum pull request create kr sakte hi , jisse samne wala isko accept kr le. 
+    

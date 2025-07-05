@@ -1,0 +1,45 @@
+Redux :-
+    State management library for JS app
+    Built for larger , more complex application.
+
+    USE ;_ 
+        multiple components , and hierarchy.
+        components, sharing state.
+
+
+        used when complexity of project is increased because of state.
+
+    Jab react ko use krte hi , 
+        to humare project me ek central store bn jata hi
+
+
+React - redux library. 
+Redux toolkit is used for writing redux . 
+
+
+
+State --> object of state
+Reducer functions --> ( state , action )
+    state ko change krna , based on the action 
+    actions ka matlab  eventts hota hi. 
+
+slice --> dividing file into features , hr feature ke reducer & action ko saath me likh sakte hi , isi ko slice kehte hi.
+
+
+
+Setup project
+    - store 
+    - actions 
+    - reducers
+
+Dsiging store :- 
+    humhe yaha pr apne states ko store krna hi. 
+
+    todo --> id , task, isDone  
+
+    Creating reducer :- 
+        createSlice function
+
+Provider component :- redux store ko available krwata hi , sabhi nested componenets ke liye , jise bhi state ko use krna hota hi.
+
+Dispatching action --> triggering action.
