@@ -1,0 +1,18 @@
+creating frontened setup with vite.
+    npm create vite@latest
+    npm intall
+    npm run dev
+
+
+in Backened setup   
+    we have to set 
+        "type" : "module"
+        to use modern export , import 
+
+
+
+
+
+
+
+
