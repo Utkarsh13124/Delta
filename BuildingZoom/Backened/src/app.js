@@ -19,13 +19,14 @@ app.use(express.urlencoded({ limit: "40kb", extended: true }));
 
 
 const start = async () => {
-  app.set("mongo_user");
+  app.set("mongo_user", "utkarshp579");
+
   const connectionDb = await mongoose.connect(
     `mongodb+srv://utkarshp579:${process.env.DB_PASS}@cluster0.zgvaqp1.mongodb.net/`
   );
 
   console.log(`MONGO Connected DB HOst: ${connectionDb.connection.host}`);
-  server.listen(app.get("port"), () => {
+  server.listen(app.get("port"), () => {    // app.get("port")  --> is fetching from app 
     console.log("LISTENIN ON PORT 8000");
   });
 };
