@@ -4,7 +4,7 @@ import { Server } from "socket.io";
 import mongoose from "mongoose";
 import cors from "cors";
 import { connectToSocket } from "./controllers/socketManager.js";
-
+import userRoutes from "./routes/users.routes.js";
 
 const app = express();  // creating app instance
 const server = createServer(app);  // 
@@ -17,6 +17,8 @@ app.use(cors()); // to handle cross origin error
 app.use(express.json({ limit: "40kb" })); // to handle payload
 app.use(express.urlencoded({ limit: "40kb", extended: true }));
 
+app.use("/api/v1/users", userRoutes);
+// app.use("/api/v2/users", newUserRoutes);  for version updates
 
 const start = async () => {
   app.set("mongo_user", "utkarshp579");
