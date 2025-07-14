@@ -1,11 +1,18 @@
 import { Server } from "socket.io";
 
-let connections = {}; // tells us how many people are connected
-let messages = {};
-let timeOnline = {};
+let connections = {}; // Maps room paths to arrays of socket IDs (tracks who's in each room) --- > tells us how many people are connected --> 
+let messages = {}; // Stores chat message history for each room
+let timeOnline = {}; // Records when each user connected
 
 export const connectToSocket = (server) => {
-  const io = new Server(server);
+    const io = new Server(server, {
+        cors: {
+            origin: "*",
+            methods: ["GET", "POST"],
+            allowedHeaders: ["*"],
+            credentials: true
+      }
+  });
 
   io.on("connection", (socket) => {
     socket.on("join-call", (path) => {
@@ -16,7 +23,7 @@ export const connectToSocket = (server) => {
 
       timeOnline[socket.id] = new Date();
 
-      for (let a = 0; a < connections[path].length; i++) {
+      for (let a = 0; a < connections[path].length; a++) {
         io.to(connections[path][a]).emit(
           "user-joined",
           socket.id,
@@ -62,7 +69,7 @@ export const connectToSocket = (server) => {
           data: data,
           "socket-id-sender": socket.id,
         });
-        console.log("mesaage", key, ":", sender, data);
+        console.log("message", matchingRoom, ":", sender, data);
 
         connections[matchingRoom].forEach((ele) => {
           io.to(ele).emit("chat-message", data, sender, socket.id);
@@ -75,7 +82,7 @@ export const connectToSocket = (server) => {
 
       var key;
 
-        // [room , person]
+      // [room , person]
       for (const [k, v] of JSON.parse(
         JSON.stringify(Object.entries(connections))
       )) {
