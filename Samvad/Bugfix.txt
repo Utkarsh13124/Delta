@@ -1,0 +1,5 @@
+Main Collaboration Flow:
+
+Permission → Connection → Streaming: The app first gets media permissions, then connects to signaling server, then establishes peer-to-peer connections
+State-Driven Media: React state changes trigger media operations through useEffect hooks, keeping UI and media in sync
+Peer-to-Peer Architecture: After initial signaling, video/audio flows directly between browsers (not through server)
