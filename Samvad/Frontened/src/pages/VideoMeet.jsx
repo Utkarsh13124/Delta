@@ -13,8 +13,7 @@ import StopScreenShareIcon from "@mui/icons-material/StopScreenShare";
 import ChatIcon from "@mui/icons-material/Chat";
 import server from "../environment";
 
-// const server_url = server;
-const server_url = "http://localhost:8000/";
+const server_url = server; // if isProd is false , http 8000 port will be selected
 
 var connections = {};
 
@@ -461,8 +460,10 @@ export default function VideoMeetComponent() {
     try {
       let tracks = localVideoref.current.srcObject.getTracks();
       tracks.forEach((track) => track.stop());
-    } catch (e) {}
-    window.location.href = "/";
+    } catch (e) {
+      console.error("Error while ending call:", e);
+    }
+    window.location.href = "/home";
   };
 
   let openChat = () => {
